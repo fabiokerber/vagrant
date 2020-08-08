@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 machines = {
-  "servidor" => {"memory" => "4096", "cpu" => "4", "ip" => "10", "image" => "centos/7"}
+  "servidor1" => {"memory" => "4096", "cpu" => "4", "ip" => "10", "image" => "centos/7"}
 }
 
 Vagrant.configure("2") do |config|
