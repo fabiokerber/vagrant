@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 machines = {
-  "servidor" => {"memory" => "4096", "cpu" => "4", "ip" => "10", "image" => "centos/7"}
+  "servidor" => {"memory" => "4096", "cpu" => "4", "ip" => "10", "image" => "centos/8"}
 }
 
 Vagrant.configure("2") do |config|
@@ -36,10 +36,20 @@ Vagrant.configure("2") do |config|
     servidor.vm.network "forwarded_port", guest: 445, host: 445
 
   servidor.vm.provision "shell", inline: <<-SHELL
-    yum update -y
-    yum install kernel-devel kernel-headers gcc make perl -y
+    timedatectl set-timezone America/Sao_Paulo					      #Operating_System
+    yum install epel-release -y							      #Operating_System
+    sed -i s/^enabled=0/enabled=1/ /etc/yum.repos.d/CentOS-PowerTools.repo	      #Operating_System
+    yum update -y								      #Operating_System
+    yum install elfutils-libelf-devel kernel-devel kernel-headers gcc make perl -y    #VBox_Guest_Additions
+    yum install python3-devel python3 libselinux-python3 -y			      #Ansible
+    yum groupinstall 'development tools' -y					      #Ansible
+    yum install htop lsb vim tree gdisk iptraf lshw nload nmap telnet wget -y	      #Tools
+    mkdir -p /etc/ansible							      #Ansible
+    git clone https://github.com/fabiokerber/roles.git /etc/ansible		      #Ansible
+    pip3 install ansible							      #Ansible
+    touch /var/log/ansible.log && chown vagrant:root /var/log/ansible.log	      #Ansible
+    sed -i s/^SELINUX=.*$/SELINUX=permissive/ /etc/selinux/config
   SHELL
 
-end
-
+  end
 end

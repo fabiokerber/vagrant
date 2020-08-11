@@ -1,0 +1,1949 @@
+Bringing machine 'zabbix' up with 'virtualbox' provider...
+Bringing machine 'graylog' up with 'virtualbox' provider...
+Bringing machine 'prometheus' up with 'virtualbox' provider...
+Bringing machine '4flix' up with 'virtualbox' provider...
+==> zabbix: Importing base box 'ubuntu/xenial64'...
+[KProgress: 10%[KProgress: 90%[K==> zabbix: Matching MAC address for NAT networking...
+==> zabbix: Setting the name of the VM: vagrant_zabbix_1596564636376_88816
+==> zabbix: Clearing any previously set network interfaces...
+==> zabbix: Preparing network interfaces based on configuration...
+    zabbix: Adapter 1: nat
+    zabbix: Adapter 2: hostonly
+==> zabbix: Forwarding ports...
+    zabbix: 22 (guest) => 2222 (host) (adapter 1)
+==> zabbix: Running 'pre-boot' VM customizations...
+==> zabbix: Booting VM...
+==> zabbix: Waiting for machine to boot. This may take a few minutes...
+    zabbix: SSH address: 127.0.0.1:2222
+    zabbix: SSH username: vagrant
+    zabbix: SSH auth method: private key
+    zabbix: Warning: Connection reset. Retrying...
+    zabbix: Warning: Remote connection disconnect. Retrying...
+    zabbix: 
+    zabbix: Vagrant insecure key detected. Vagrant will automatically replace
+    zabbix: this with a newly generated keypair for better security.
+    zabbix: 
+    zabbix: Inserting generated public key within guest...
+    zabbix: Removing insecure key from the guest if it's present...
+    zabbix: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> zabbix: Machine booted and ready!
+==> zabbix: Checking for guest additions in VM...
+    zabbix: The guest additions on this VM do not match the installed version of
+    zabbix: VirtualBox! In most cases this is fine, but in rare cases it can
+    zabbix: prevent things such as shared folders from working properly. If you see
+    zabbix: shared folder errors, please make sure the guest additions within the
+    zabbix: virtual machine match the version of VirtualBox you have installed on
+    zabbix: your host and reload your VM.
+    zabbix: 
+    zabbix: Guest Additions Version: 5.1.38
+    zabbix: VirtualBox Version: 6.1
+==> zabbix: Setting hostname...
+==> zabbix: Configuring and enabling network interfaces...
+==> zabbix: Mounting shared folders...
+    zabbix: /vagrant => /home/king/vagrant
+==> zabbix: Running provisioner: shell...
+    zabbix: Running: inline script
+    zabbix: mkdir: cannot create directory ‘/root/.ssh/’: File exists
+==> zabbix: Running provisioner: shell...
+    zabbix: Running: inline script
+    zabbix: 
+    zabbix: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    zabbix: Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+    zabbix: Hit:2 http://archive.ubuntu.com/ubuntu xenial InRelease
+    zabbix: Get:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+    zabbix: Get:4 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [904 kB]
+    zabbix: Get:5 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+    zabbix: Get:6 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [7,532 kB]
+    zabbix: Get:7 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [497 kB]
+    zabbix: Get:8 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [204 kB]
+    zabbix: Get:9 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [6,088 B]
+    zabbix: Get:10 http://security.ubuntu.com/ubuntu xenial-security/multiverse Translation-en [2,888 B]
+    zabbix: Get:11 http://archive.ubuntu.com/ubuntu xenial/universe Translation-en [4,354 kB]
+    zabbix: Get:12 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [144 kB]
+    zabbix: Get:13 http://archive.ubuntu.com/ubuntu xenial/multiverse Translation-en [106 kB]
+    zabbix: Get:14 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [1,180 kB]
+    zabbix: Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [802 kB]
+    zabbix: Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [336 kB]
+    zabbix: Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [17.1 kB]
+    zabbix: Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse Translation-en [8,632 B]
+    zabbix: Get:19 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [7,280 B]
+    zabbix: Get:20 http://archive.ubuntu.com/ubuntu xenial-backports/main Translation-en [4,456 B]
+    zabbix: Get:21 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [8,316 B]
+    zabbix: Get:22 http://archive.ubuntu.com/ubuntu xenial-backports/universe Translation-en [4,476 B]
+    zabbix: Fetched 16.4 MB in 7s (2,135 kB/s)
+    zabbix: Reading package lists...
+    zabbix: Building dependency tree...
+    zabbix: Reading state information...
+    zabbix: 4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    zabbix: 
+    zabbix: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    zabbix: Reading package lists...
+    zabbix: Building dependency tree...
+    zabbix: 
+    zabbix: Reading state information...
+    zabbix: The following additional packages will be installed:
+    zabbix:   libpython-stdlib libpython2.7-minimal libpython2.7-stdlib python-minimal
+    zabbix:   python2.7 python2.7-minimal
+    zabbix: Suggested packages:
+    zabbix:   python-doc python-tk python2.7-doc binutils binfmt-support zip
+    zabbix: The following NEW packages will be installed:
+    zabbix:   libpython-stdlib libpython2.7-minimal libpython2.7-stdlib python
+    zabbix:   python-minimal python2.7 python2.7-minimal unzip
+    zabbix: 0 upgraded, 8 newly installed, 0 to remove and 4 not upgraded.
+    zabbix: Need to get 4,034 kB of archives.
+    zabbix: After this operation, 17.1 MB of additional disk space will be used.
+    zabbix: Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-minimal amd64 2.7.12-1ubuntu0~16.04.12 [338 kB]
+    zabbix: Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-minimal amd64 2.7.12-1ubuntu0~16.04.12 [1,258 kB]
+    zabbix: Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-minimal amd64 2.7.12-1~16.04 [28.1 kB]
+    zabbix: Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-stdlib amd64 2.7.12-1ubuntu0~16.04.12 [1,883 kB]
+    zabbix: Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7 amd64 2.7.12-1ubuntu0~16.04.12 [224 kB]
+    zabbix: Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython-stdlib amd64 2.7.12-1~16.04 [7,768 B]
+    zabbix: Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python amd64 2.7.12-1~16.04 [137 kB]
+    zabbix: Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 unzip amd64 6.0-20ubuntu1 [158 kB]
+    zabbix: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    zabbix: Fetched 4,034 kB in 2s (1,440 kB/s)
+    zabbix: Selecting previously unselected package libpython2.7-minimal:amd64.
+    zabbix: (Reading database ... 
+    zabbix: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%
+    zabbix: (Reading database ... 65%
+    zabbix: (Reading database ... 70%
+    zabbix: (Reading database ... 75%
+    zabbix: (Reading database ... 80%
+    zabbix: (Reading database ... 85%
+    zabbix: (Reading database ... 90%
+    zabbix: (Reading database ... 95%
+    zabbix: (Reading database ... 100%(Reading database ... 54300 files and directories currently installed.)
+    zabbix: Preparing to unpack .../libpython2.7-minimal_2.7.12-1ubuntu0~16.04.12_amd64.deb ...
+    zabbix: Unpacking libpython2.7-minimal:amd64 (2.7.12-1ubuntu0~16.04.12) ...
+    zabbix: Selecting previously unselected package python2.7-minimal.
+    zabbix: Preparing to unpack .../python2.7-minimal_2.7.12-1ubuntu0~16.04.12_amd64.deb ...
+    zabbix: Unpacking python2.7-minimal (2.7.12-1ubuntu0~16.04.12) ...
+    zabbix: Selecting previously unselected package python-minimal.
+    zabbix: Preparing to unpack .../python-minimal_2.7.12-1~16.04_amd64.deb ...
+    zabbix: Unpacking python-minimal (2.7.12-1~16.04) ...
+    zabbix: Selecting previously unselected package libpython2.7-stdlib:amd64.
+    zabbix: Preparing to unpack .../libpython2.7-stdlib_2.7.12-1ubuntu0~16.04.12_amd64.deb ...
+    zabbix: Unpacking libpython2.7-stdlib:amd64 (2.7.12-1ubuntu0~16.04.12) ...
+    zabbix: Selecting previously unselected package python2.7.
+    zabbix: Preparing to unpack .../python2.7_2.7.12-1ubuntu0~16.04.12_amd64.deb ...
+    zabbix: Unpacking python2.7 (2.7.12-1ubuntu0~16.04.12) ...
+    zabbix: Selecting previously unselected package libpython-stdlib:amd64.
+    zabbix: Preparing to unpack .../libpython-stdlib_2.7.12-1~16.04_amd64.deb ...
+    zabbix: Unpacking libpython-stdlib:amd64 (2.7.12-1~16.04) ...
+    zabbix: Processing triggers for man-db (2.7.5-1) ...
+    zabbix: Processing triggers for mime-support (3.59ubuntu1) ...
+    zabbix: Setting up libpython2.7-minimal:amd64 (2.7.12-1ubuntu0~16.04.12) ...
+    zabbix: Setting up python2.7-minimal (2.7.12-1ubuntu0~16.04.12) ...
+    zabbix: Linking and byte-compiling packages for runtime python2.7...
+    zabbix: Setting up python-minimal (2.7.12-1~16.04) ...
+    zabbix: Selecting previously unselected package python.
+    zabbix: (Reading database ... 
+    zabbix: (Reading database ... 5%
+    zabbix: (Reading database ... 10%
+    zabbix: (Reading database ... 15%
+    zabbix: (Reading database ... 20%
+    zabbix: (Reading database ... 25%
+    zabbix: (Reading database ... 30%
+    zabbix: (Reading database ... 35%
+    zabbix: (Reading database ... 40%
+    zabbix: (Reading database ... 45%
+    zabbix: (Reading database ... 50%
+    zabbix: (Reading database ... 55%
+    zabbix: (Reading database ... 60%
+    zabbix: (Reading database ... 65%
+    zabbix: (Reading database ... 70%
+    zabbix: (Reading database ... 75%
+    zabbix: (Reading database ... 80%
+    zabbix: (Reading database ... 85%
+    zabbix: (Reading database ... 90%
+    zabbix: (Reading database ... 95%
+    zabbix: (Reading database ... 100%
+    zabbix: (Reading database ... 
+    zabbix: 55046 files and directories currently installed.)
+    zabbix: Preparing to unpack .../python_2.7.12-1~16.04_amd64.deb ...
+    zabbix: Unpacking python (2.7.12-1~16.04) ...
+    zabbix: Selecting previously unselected package unzip.
+    zabbix: Preparing to unpack .../unzip_6.0-20ubuntu1_amd64.deb ...
+    zabbix: Unpacking unzip (6.0-20ubuntu1) ...
+    zabbix: Processing triggers for man-db (2.7.5-1) ...
+    zabbix: Processing triggers for mime-support (3.59ubuntu1) ...
+    zabbix: Setting up libpython2.7-stdlib:amd64 (2.7.12-1ubuntu0~16.04.12) ...
+    zabbix: Setting up python2.7 (2.7.12-1ubuntu0~16.04.12) ...
+    zabbix: Setting up libpython-stdlib:amd64 (2.7.12-1~16.04) ...
+    zabbix: Setting up python (2.7.12-1~16.04) ...
+    zabbix: Setting up unzip (6.0-20ubuntu1) ...
+==> graylog: Importing base box 'ubuntu/xenial64'...
+[KProgress: 10%[KProgress: 90%[K==> graylog: Matching MAC address for NAT networking...
+==> graylog: Setting the name of the VM: vagrant_graylog_1596564721389_1224
+==> graylog: Fixed port collision for 22 => 2222. Now on port 2200.
+==> graylog: Clearing any previously set network interfaces...
+==> graylog: Preparing network interfaces based on configuration...
+    graylog: Adapter 1: nat
+    graylog: Adapter 2: hostonly
+==> graylog: Forwarding ports...
+    graylog: 22 (guest) => 2200 (host) (adapter 1)
+==> graylog: Running 'pre-boot' VM customizations...
+==> graylog: Booting VM...
+==> graylog: Waiting for machine to boot. This may take a few minutes...
+    graylog: SSH address: 127.0.0.1:2200
+    graylog: SSH username: vagrant
+    graylog: SSH auth method: private key
+    graylog: Warning: Remote connection disconnect. Retrying...
+    graylog: Warning: Connection reset. Retrying...
+    graylog: 
+    graylog: Vagrant insecure key detected. Vagrant will automatically replace
+    graylog: this with a newly generated keypair for better security.
+    graylog: 
+    graylog: Inserting generated public key within guest...
+    graylog: Removing insecure key from the guest if it's present...
+    graylog: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> graylog: Machine booted and ready!
+==> graylog: Checking for guest additions in VM...
+    graylog: The guest additions on this VM do not match the installed version of
+    graylog: VirtualBox! In most cases this is fine, but in rare cases it can
+    graylog: prevent things such as shared folders from working properly. If you see
+    graylog: shared folder errors, please make sure the guest additions within the
+    graylog: virtual machine match the version of VirtualBox you have installed on
+    graylog: your host and reload your VM.
+    graylog: 
+    graylog: Guest Additions Version: 5.1.38
+    graylog: VirtualBox Version: 6.1
+==> graylog: Setting hostname...
+==> graylog: Configuring and enabling network interfaces...
+==> graylog: Mounting shared folders...
+    graylog: /vagrant => /home/king/vagrant
+==> graylog: Running provisioner: shell...
+    graylog: Running: inline script
+    graylog: mkdir: 
+    graylog: cannot create directory ‘/root/.ssh/’
+    graylog: : File exists
+==> graylog: Running provisioner: shell...
+    graylog: Running: inline script
+    graylog: --2020-08-04 18:12:47--  https://apt.puppetlabs.com/puppet5-release-xenial.deb
+    graylog: Resolving apt.puppetlabs.com (apt.puppetlabs.com)... 
+    graylog: 13.227.106.104, 13.227.106.92, 13.227.106.10, ...
+    graylog: Connecting to apt.puppetlabs.com (apt.puppetlabs.com)|13.227.106.104|:443... 
+    graylog: connected.
+    graylog: HTTP request sent, awaiting response... 
+    graylog: 200 OK
+    graylog: Length: 11822 (12K) [application/x-debian-package]
+    graylog: Saving to: ‘puppet5-release-xenial.deb’
+    graylog: 
+    graylog:      0K .
+    graylog: .......
+    graylog: .
+    graylog: . .                      
+    graylog:        
+    graylog:        
+    graylog:     
+    graylog:   100%  148M=0s
+    graylog: 2020-08-04 18:12:47 (148 MB/s) - ‘puppet5-release-xenial.deb’ saved [11822/11822]
+    graylog: Selecting previously unselected package puppet5-release.
+    graylog: (Reading database ... 54300 files and directories currently installed.)
+    graylog: Preparing to unpack puppet5-release-xenial.deb ...
+    graylog: Unpacking puppet5-release (5.0.0-11xenial) ...
+    graylog: Setting up puppet5-release (5.0.0-11xenial) ...
+    graylog: 
+    graylog: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    graylog: Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+    graylog: Hit:2 http://archive.ubuntu.com/ubuntu xenial InRelease
+    graylog: Get:3 http://apt.puppetlabs.com xenial InRelease [101 kB]
+    graylog: Get:4 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+    graylog: Get:5 http://apt.puppetlabs.com xenial/puppet5 amd64 Packages [54.0 kB]
+    graylog: Get:6 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+    graylog: Get:7 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [904 kB]
+    graylog: Get:8 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [7,532 kB]
+    graylog: Get:9 http://apt.puppetlabs.com xenial/puppet5 all Packages [18.4 kB]
+    graylog: Get:10 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [497 kB]
+    graylog: Get:11 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [204 kB]
+    graylog: Get:12 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [6,088 B]
+    graylog: Get:13 http://security.ubuntu.com/ubuntu xenial-security/multiverse Translation-en [2,888 B]
+    graylog: Get:14 http://archive.ubuntu.com/ubuntu xenial/universe Translation-en [4,354 kB]
+    graylog: Get:15 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [144 kB]
+    graylog: Get:16 http://archive.ubuntu.com/ubuntu xenial/multiverse Translation-en [106 kB]
+    graylog: Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [1,180 kB]
+    graylog: Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [802 kB]
+    graylog: Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [336 kB]
+    graylog: Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [17.1 kB]
+    graylog: Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse Translation-en [8,632 B]
+    graylog: Get:22 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [7,280 B]
+    graylog: Get:23 http://archive.ubuntu.com/ubuntu xenial-backports/main Translation-en [4,456 B]
+    graylog: Get:24 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [8,316 B]
+    graylog: Get:25 http://archive.ubuntu.com/ubuntu xenial-backports/universe Translation-en [4,476 B]
+    graylog: Fetched 16.6 MB in 7s (2,197 kB/s)
+    graylog: Reading package lists...
+    graylog: Building dependency tree...
+    graylog: 
+    graylog: Reading state information...
+    graylog: 7 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    graylog: WARNING: 
+    graylog: apt
+    graylog:  
+    graylog: does not have a stable CLI interface. 
+    graylog: Use with caution in scripts.
+    graylog: Reading package lists...
+    graylog: Building dependency tree...
+    graylog: Reading state information...
+    graylog: The following additional packages will be installed:
+    graylog:   libpython-stdlib libpython2.7-minimal libpython2.7-stdlib libsensors4
+    graylog:   libsnmp-base libsnmp30 python-minimal python2.7 python2.7-minimal
+    graylog: Suggested packages:
+    graylog:   lm-sensors snmp-mibs-downloader python-doc python-tk python2.7-doc binutils
+    graylog:   binfmt-support snmptrapd
+    graylog: The following NEW packages will be installed:
+    graylog:   libpython-stdlib libpython2.7-minimal libpython2.7-stdlib libsensors4
+    graylog:   libsnmp-base libsnmp30 puppet-agent python python-minimal python2.7
+    graylog:   python2.7-minimal snmpd
+    graylog: 0 upgraded, 12 newly installed, 0 to remove and 7 not upgraded.
+    graylog: Need to get 23.9 MB of archives.
+    graylog: After this operation, 138 MB of additional disk space will be used.
+    graylog: Get:1 http://apt.puppetlabs.com xenial/puppet5 amd64 puppet-agent amd64 5.5.21-1xenial [18.9 MB]
+    graylog: Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-minimal amd64 2.7.12-1ubuntu0~16.04.12 [338 kB]
+    graylog: Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-minimal amd64 2.7.12-1ubuntu0~16.04.12 [1,258 kB]
+    graylog: Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-minimal amd64 2.7.12-1~16.04 [28.1 kB]
+    graylog: Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-stdlib amd64 2.7.12-1ubuntu0~16.04.12 [1,883 kB]
+    graylog: Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7 amd64 2.7.12-1ubuntu0~16.04.12 [224 kB]
+    graylog: Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython-stdlib amd64 2.7.12-1~16.04 [7,768 B]
+    graylog: Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python amd64 2.7.12-1~16.04 [137 kB]
+    graylog: Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsensors4 amd64 1:3.4.0-2 [28.4 kB]
+    graylog: Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsnmp-base all 5.7.3+dfsg-1ubuntu4.4 [224 kB]
+    graylog: Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsnmp30 amd64 5.7.3+dfsg-1ubuntu4.4 [811 kB]
+    graylog: Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 snmpd amd64 5.7.3+dfsg-1ubuntu4.4 [57.0 kB]
+    graylog: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    graylog: Fetched 23.9 MB in 5s (4,130 kB/s)
+    graylog: Selecting previously unselected package libpython2.7-minimal:amd64.
+    graylog: (Reading database ... 
+    graylog: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%
+    graylog: (Reading database ... 50%(Reading database ... 55%(Reading database ... 60%
+    graylog: (Reading database ... 65%
+    graylog: (Reading database ... 70%
+    graylog: (Reading database ... 75%
+    graylog: (Reading database ... 80%
+    graylog: (Reading database ... 85%
+    graylog: (Reading database ... 90%
+    graylog: (Reading database ... 95%
+    graylog: (Reading database ... 100%(Reading database ... 54305 files and directories currently installed.)
+    graylog: Preparing to unpack .../libpython2.7-minimal_2.7.12-1ubuntu0~16.04.12_amd64.deb ...
+    graylog: Unpacking libpython2.7-minimal:amd64 (2.7.12-1ubuntu0~16.04.12) ...
+    graylog: Selecting previously unselected package python2.7-minimal.
+    graylog: Preparing to unpack .../python2.7-minimal_2.7.12-1ubuntu0~16.04.12_amd64.deb ...
+    graylog: Unpacking python2.7-minimal (2.7.12-1ubuntu0~16.04.12) ...
+    graylog: Selecting previously unselected package python-minimal.
+    graylog: Preparing to unpack .../python-minimal_2.7.12-1~16.04_amd64.deb ...
+    graylog: Unpacking python-minimal (2.7.12-1~16.04) ...
+    graylog: Selecting previously unselected package libpython2.7-stdlib:amd64.
+    graylog: Preparing to unpack .../libpython2.7-stdlib_2.7.12-1ubuntu0~16.04.12_amd64.deb ...
+    graylog: Unpacking libpython2.7-stdlib:amd64 (2.7.12-1ubuntu0~16.04.12) ...
+    graylog: Selecting previously unselected package python2.7.
+    graylog: Preparing to unpack .../python2.7_2.7.12-1ubuntu0~16.04.12_amd64.deb ...
+    graylog: Unpacking python2.7 (2.7.12-1ubuntu0~16.04.12) ...
+    graylog: Selecting previously unselected package libpython-stdlib:amd64.
+    graylog: Preparing to unpack .../libpython-stdlib_2.7.12-1~16.04_amd64.deb ...
+    graylog: Unpacking libpython-stdlib:amd64 (2.7.12-1~16.04) ...
+    graylog: Processing triggers for man-db (2.7.5-1) ...
+    graylog: Processing triggers for mime-support (3.59ubuntu1) ...
+    graylog: Setting up libpython2.7-minimal:amd64 (2.7.12-1ubuntu0~16.04.12) ...
+    graylog: Setting up python2.7-minimal (2.7.12-1ubuntu0~16.04.12) ...
+    graylog: Linking and byte-compiling packages for runtime python2.7...
+    graylog: Setting up python-minimal (2.7.12-1~16.04) ...
+    graylog: Selecting previously unselected package python.
+    graylog: (Reading database ... 
+    graylog: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%
+    graylog: (Reading database ... 70%
+    graylog: (Reading database ... 75%
+    graylog: (Reading database ... 80%
+    graylog: (Reading database ... 85%
+    graylog: (Reading database ... 90%
+    graylog: (Reading database ... 95%
+    graylog: (Reading database ... 100%(Reading database ... 55051 files and directories currently installed.)
+    graylog: Preparing to unpack .../python_2.7.12-1~16.04_amd64.deb ...
+    graylog: Unpacking python (2.7.12-1~16.04) ...
+    graylog: Selecting previously unselected package libsensors4:amd64.
+    graylog: Preparing to unpack .../libsensors4_1%3a3.4.0-2_amd64.deb ...
+    graylog: Unpacking libsensors4:amd64 (1:3.4.0-2) ...
+    graylog: Selecting previously unselected package libsnmp-base.
+    graylog: Preparing to unpack .../libsnmp-base_5.7.3+dfsg-1ubuntu4.4_all.deb ...
+    graylog: Unpacking libsnmp-base (5.7.3+dfsg-1ubuntu4.4) ...
+    graylog: Selecting previously unselected package libsnmp30:amd64.
+    graylog: Preparing to unpack .../libsnmp30_5.7.3+dfsg-1ubuntu4.4_amd64.deb ...
+    graylog: Unpacking libsnmp30:amd64 (5.7.3+dfsg-1ubuntu4.4) ...
+    graylog: Selecting previously unselected package puppet-agent.
+    graylog: Preparing to unpack .../puppet-agent_5.5.21-1xenial_amd64.deb ...
+    graylog: Unpacking puppet-agent (5.5.21-1xenial) ...
+    graylog: Selecting previously unselected package snmpd.
+    graylog: Preparing to unpack .../snmpd_5.7.3+dfsg-1ubuntu4.4_amd64.deb ...
+    graylog: Unpacking snmpd (5.7.3+dfsg-1ubuntu4.4) ...
+    graylog: Processing triggers for man-db (2.7.5-1) ...
+    graylog: Processing triggers for libc-bin (2.23-0ubuntu11.2) ...
+    graylog: Processing triggers for ureadahead (0.100.0-19.1) ...
+    graylog: Processing triggers for systemd (229-4ubuntu21.28) ...
+    graylog: Setting up libpython2.7-stdlib:amd64 (2.7.12-1ubuntu0~16.04.12) ...
+    graylog: Setting up python2.7 (2.7.12-1ubuntu0~16.04.12) ...
+    graylog: Setting up libpython-stdlib:amd64 (2.7.12-1~16.04) ...
+    graylog: Setting up python (2.7.12-1~16.04) ...
+    graylog: Setting up libsensors4:amd64 (1:3.4.0-2) ...
+    graylog: Setting up libsnmp-base (5.7.3+dfsg-1ubuntu4.4) ...
+    graylog: Setting up libsnmp30:amd64 (5.7.3+dfsg-1ubuntu4.4) ...
+    graylog: Setting up puppet-agent (5.5.21-1xenial) ...
+    graylog: Created symlink from /etc/systemd/system/multi-user.target.wants/puppet.service to /lib/systemd/system/puppet.service.
+    graylog: Created symlink from /etc/systemd/system/multi-user.target.wants/mcollective.service to /lib/systemd/system/mcollective.service.
+    graylog: Created symlink from /etc/systemd/system/multi-user.target.wants/pxp-agent.service to /lib/systemd/system/pxp-agent.service.
+    graylog: Removed symlink /etc/systemd/system/multi-user.target.wants/pxp-agent.service.
+    graylog: Setting up snmpd (5.7.3+dfsg-1ubuntu4.4) ...
+    graylog: adduser: Warning: The home directory `/var/lib/snmp' does not belong to the user you are currently creating.
+    graylog: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+    graylog: update-rc.d: warning: stop runlevel arguments (1) do not match snmpd Default-Stop values (0 1 6)
+    graylog: Processing triggers for libc-bin (2.23-0ubuntu11.2) ...
+    graylog: Processing triggers for ureadahead (0.100.0-19.1) ...
+    graylog: Processing triggers for systemd (229-4ubuntu21.28) ...
+    graylog: snmpd.service is not a native service, redirecting to systemd-sysv-install
+    graylog: Executing /lib/systemd/systemd-sysv-install enable snmpd
+==> prometheus: Importing base box 'centos/7'...
+[KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> prometheus: Matching MAC address for NAT networking...
+==> prometheus: Setting the name of the VM: vagrant_prometheus_1596564833077_74125
+==> prometheus: Fixed port collision for 22 => 2222. Now on port 2201.
+==> prometheus: Clearing any previously set network interfaces...
+==> prometheus: Preparing network interfaces based on configuration...
+    prometheus: Adapter 1: nat
+    prometheus: Adapter 2: hostonly
+==> prometheus: Forwarding ports...
+    prometheus: 22 (guest) => 2201 (host) (adapter 1)
+==> prometheus: Running 'pre-boot' VM customizations...
+==> prometheus: Booting VM...
+==> prometheus: Waiting for machine to boot. This may take a few minutes...
+    prometheus: SSH address: 127.0.0.1:2201
+    prometheus: SSH username: vagrant
+    prometheus: SSH auth method: private key
+    prometheus: 
+    prometheus: Vagrant insecure key detected. Vagrant will automatically replace
+    prometheus: this with a newly generated keypair for better security.
+    prometheus: 
+    prometheus: Inserting generated public key within guest...
+    prometheus: Removing insecure key from the guest if it's present...
+    prometheus: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> prometheus: Machine booted and ready!
+==> prometheus: Checking for guest additions in VM...
+    prometheus: No guest additions were detected on the base box for this VM! Guest
+    prometheus: additions are required for forwarded ports, shared folders, host only
+    prometheus: networking, and more. If SSH fails on this machine, please install
+    prometheus: the guest additions and repackage the box to continue.
+    prometheus: 
+    prometheus: This is not an error message; everything may continue to work properly,
+    prometheus: in which case you may ignore this message.
+==> prometheus: Setting hostname...
+==> prometheus: Configuring and enabling network interfaces...
+==> prometheus: Rsyncing folder: /home/king/vagrant/ => /vagrant
+==> prometheus: Running provisioner: shell...
+    prometheus: Running: inline script
+==> prometheus: Running provisioner: shell...
+    prometheus: Running: inline script
+    prometheus: warning: /var/tmp/rpm-tmp.9cbUPd: Header V4 RSA/SHA256 Signature, key ID ef8d349f: NOKEY
+    prometheus: Retrieving https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
+    prometheus: Preparing...                          ########################################
+    prometheus: Updating / installing...
+    prometheus: puppet5-release-5.0.0-11.el7          ########################################
+    prometheus: Loaded plugins: fastestmirror
+    prometheus: Determining fastest mirrors
+    prometheus:  * base: mirror.globo.com
+    prometheus:  * extras: mirror.globo.com
+    prometheus:  * updates: mirror.globo.com
+    prometheus: Package python-2.7.5-88.el7.x86_64 already installed and latest version
+    prometheus: Resolving Dependencies
+    prometheus: --> Running transaction check
+    prometheus: ---> Package epel-release.noarch 0:7-11 will be installed
+    prometheus: ---> Package puppet-agent.x86_64 0:5.5.21-1.el7 will be installed
+    prometheus: ---> Package vim-enhanced.x86_64 2:7.4.629-6.el7 will be installed
+    prometheus: --> Processing Dependency: vim-common = 2:7.4.629-6.el7 for package: 2:vim-enhanced-7.4.629-6.el7.x86_64
+    prometheus: --> Processing Dependency: perl(:MODULE_COMPAT_5.16.3) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64
+    prometheus: --> Processing Dependency: libperl.so()(64bit) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64
+    prometheus: --> Processing Dependency: libgpm.so.2()(64bit) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64
+    prometheus: ---> Package wget.x86_64 0:1.14-18.el7_6.1 will be installed
+    prometheus: --> Running transaction check
+    prometheus: ---> Package gpm-libs.x86_64 0:1.20.7-6.el7 will be installed
+    prometheus: ---> Package perl.x86_64 4:5.16.3-295.el7 will be installed
+    prometheus: --> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl-macros for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Getopt::Long) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(File::Temp) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: --> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-295.el7.x86_64
+    prometheus: ---> Package perl-libs.x86_64 4:5.16.3-295.el7 will be installed
+    prometheus: ---> Package vim-common.x86_64 2:7.4.629-6.el7 will be installed
+    prometheus: --> Processing Dependency: vim-filesystem for package: 2:vim-common-7.4.629-6.el7.x86_64
+    prometheus: --> Running transaction check
+    prometheus: ---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
+    prometheus: ---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
+    prometheus: ---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
+    prometheus: ---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
+    prometheus: ---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
+    prometheus: ---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed
+    prometheus: --> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch
+    prometheus: --> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch
+    prometheus: ---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
+    prometheus: ---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
+    prometheus: --> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+    prometheus: --> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+    prometheus: ---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
+    prometheus: ---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed
+    prometheus: ---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
+    prometheus: ---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
+    prometheus: ---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
+    prometheus: ---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
+    prometheus: ---> Package perl-macros.x86_64 4:5.16.3-295.el7 will be installed
+    prometheus: ---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
+    prometheus: ---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
+    prometheus: ---> Package vim-filesystem.x86_64 2:7.4.629-6.el7 will be installed
+    prometheus: --> Running transaction check
+    prometheus: ---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
+    prometheus: ---> Package perl-Pod-Escapes.noarch 1:1.04-295.el7 will be installed
+    prometheus: ---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
+    prometheus: --> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
+    prometheus: --> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
+    prometheus: ---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
+    prometheus: --> Running transaction check
+    prometheus: ---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
+    prometheus: --> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+    prometheus: --> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+    prometheus: ---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
+    prometheus: --> Running transaction check
+    prometheus: ---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
+    prometheus: ---> Package perl-parent.noarch 1:0.225-244.el7 will be installed
+    prometheus: --> Finished Dependency Resolution
+    prometheus: 
+    prometheus: Dependencies Resolved
+    prometheus: 
+    prometheus: ================================================================================
+    prometheus:  Package                    Arch       Version                Repository   Size
+    prometheus: ================================================================================
+    prometheus: Installing:
+    prometheus:  epel-release               noarch     7-11                   extras       15 k
+    prometheus:  puppet-agent               x86_64     5.5.21-1.el7           puppet5      22 M
+    prometheus:  vim-enhanced               x86_64     2:7.4.629-6.el7        base        1.1 M
+    prometheus:  wget                       x86_64     1.14-18.el7_6.1        base        547 k
+    prometheus: Installing for dependencies:
+    prometheus:  gpm-libs                   x86_64     1.20.7-6.el7           base         32 k
+    prometheus:  perl                       x86_64     4:5.16.3-295.el7       base        8.0 M
+    prometheus:  perl-Carp                  noarch     1.26-244.el7           base         19 k
+    prometheus:  perl-Encode                x86_64     2.51-7.el7             base        1.5 M
+    prometheus:  perl-Exporter              noarch     5.68-3.el7             base         28 k
+    prometheus:  perl-File-Path             noarch     2.09-2.el7             base         26 k
+    prometheus:  perl-File-Temp             noarch     0.23.01-3.el7          base         56 k
+    prometheus:  perl-Filter                x86_64     1.49-3.el7             base         76 k
+    prometheus:  perl-Getopt-Long           noarch     2.40-3.el7             base         56 k
+    prometheus:  perl-HTTP-Tiny             noarch     0.033-3.el7            base         38 k
+    prometheus:  perl-PathTools             x86_64     3.40-5.el7             base         82 k
+    prometheus:  perl-Pod-Escapes           noarch     1:1.04-295.el7         base         51 k
+    prometheus:  perl-Pod-Perldoc           noarch     3.20-4.el7             base         87 k
+    prometheus:  perl-Pod-Simple            noarch     1:3.28-4.el7           base        216 k
+    prometheus:  perl-Pod-Usage             noarch     1.63-3.el7             base         27 k
+    prometheus:  perl-Scalar-List-Utils     x86_64     1.27-248.el7           base         36 k
+    prometheus:  perl-Socket                x86_64     2.010-5.el7            base         49 k
+    prometheus:  perl-Storable              x86_64     2.45-3.el7             base         77 k
+    prometheus:  perl-Text-ParseWords       noarch     3.29-4.el7             base         14 k
+    prometheus:  perl-Time-HiRes            x86_64     4:1.9725-3.el7         base         45 k
+    prometheus:  perl-Time-Local            noarch     1.2300-2.el7           base         24 k
+    prometheus:  perl-constant              noarch     1.27-2.el7             base         19 k
+    prometheus:  perl-libs                  x86_64     4:5.16.3-295.el7       base        689 k
+    prometheus:  perl-macros                x86_64     4:5.16.3-295.el7       base         44 k
+    prometheus:  perl-parent                noarch     1:0.225-244.el7        base         12 k
+    prometheus:  perl-podlators             noarch     2.5.1-3.el7            base        112 k
+    prometheus:  perl-threads               x86_64     1.87-4.el7             base         49 k
+    prometheus:  perl-threads-shared        x86_64     1.43-6.el7             base         39 k
+    prometheus:  vim-common                 x86_64     2:7.4.629-6.el7        base        5.9 M
+    prometheus:  vim-filesystem             x86_64     2:7.4.629-6.el7        base         11 k
+    prometheus: 
+    prometheus: Transaction Summary
+    prometheus: ================================================================================
+    prometheus: Install  4 Packages (+30 Dependent packages)
+    prometheus: 
+    prometheus: Total download size: 41 M
+    prometheus: Installed size: 84 M
+    prometheus: Downloading packages:
+    prometheus: Public key for epel-release-7-11.noarch.rpm is not installed
+    prometheus: warning: /var/cache/yum/x86_64/7/extras/packages/epel-release-7-11.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    prometheus: Public key for gpm-libs-1.20.7-6.el7.x86_64.rpm is not installed
+    prometheus: Public key for puppet-agent-5.5.21-1.el7.x86_64.rpm is not installed
+    prometheus: warning: /var/cache/yum/x86_64/7/puppet5/packages/puppet-agent-5.5.21-1.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID ef8d349f: NOKEY
+    prometheus: --------------------------------------------------------------------------------
+    prometheus: Total                                              3.2 MB/s |  41 MB  00:12     
+    prometheus: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    prometheus: Importing GPG key 0xF4A80EB5:
+    prometheus:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+    prometheus:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+    prometheus:  Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+    prometheus:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    prometheus: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppet5-release
+    prometheus: Importing GPG key 0xEF8D349F:
+    prometheus:  Userid     : "Puppet, Inc. Release Key (Puppet, Inc. Release Key) <release@puppet.com>"
+    prometheus:  Fingerprint: 6f6b 1550 9cf8 e59e 6e46 9f32 7f43 8280 ef8d 349f
+    prometheus:  Package    : puppet5-release-5.0.0-11.el7.noarch (installed)
+    prometheus:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-puppet5-release
+    prometheus: Running transaction check
+    prometheus: Running transaction test
+    prometheus: Transaction test succeeded
+    prometheus: Running transaction
+    prometheus: Warning: RPMDB altered outside of yum.
+    prometheus:   Installing : 1:perl-parent-0.225-244.el7.noarch                          1/34
+    prometheus:  
+    prometheus:   Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                           2/34
+    prometheus:  
+    prometheus:   Installing : perl-podlators-2.5.1-3.el7.noarch                           3/34
+    prometheus:  
+    prometheus:   Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                          4/34
+    prometheus:  
+    prometheus:   Installing : 1:perl-Pod-Escapes-1.04-295.el7.noarch                      5/34
+    prometheus:  
+    prometheus:   Installing : perl-Text-ParseWords-3.29-4.el7.noarch                      6/34
+    prometheus:  
+    prometheus:   Installing : perl-Encode-2.51-7.el7.x86_64                               7/34
+    prometheus:  
+    prometheus:   Installing : perl-Pod-Usage-1.63-3.el7.noarch                            8/34
+    prometheus:  
+    prometheus:   Installing : 4:perl-libs-5.16.3-295.el7.x86_64                           9/34
+    prometheus:  
+    prometheus:   Installing : 4:perl-macros-5.16.3-295.el7.x86_64                        10/34
+    prometheus:  
+    prometheus:   Installing : perl-Storable-2.45-3.el7.x86_64                            11/34
+    prometheus:  
+    prometheus:   Installing : perl-Exporter-5.68-3.el7.noarch                            12/34
+    prometheus:  
+    prometheus:   Installing : perl-constant-1.27-2.el7.noarch                            13/34
+    prometheus:  
+    prometheus:   Installing : perl-Socket-2.010-5.el7.x86_64                             14/34
+    prometheus:  
+    prometheus:   Installing : perl-Time-Local-1.2300-2.el7.noarch                        15/34
+    prometheus:  
+    prometheus:   Installing : perl-Carp-1.26-244.el7.noarch                              16/34
+    prometheus:  
+    prometheus:   Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      17/34
+    prometheus:  
+    prometheus:   Installing : perl-PathTools-3.40-5.el7.x86_64                           18/34
+    prometheus:  
+    prometheus:   Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 19/34
+    prometheus:  
+    prometheus:   Installing : perl-File-Temp-0.23.01-3.el7.noarch                        20/34
+    prometheus:  
+    prometheus:   Installing : perl-File-Path-2.09-2.el7.noarch                           21/34
+    prometheus:  
+    prometheus:   Installing : perl-threads-shared-1.43-6.el7.x86_64                      22/34
+    prometheus:  
+    prometheus:   Installing : perl-threads-1.87-4.el7.x86_64                             23/34
+    prometheus:  
+    prometheus:   Installing : perl-Filter-1.49-3.el7.x86_64                              24/34
+    prometheus:  
+    prometheus:   Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                        25/34
+    prometheus:  
+    prometheus:   Installing : perl-Getopt-Long-2.40-3.el7.noarch                         26/34
+    prometheus:  
+    prometheus:   Installing : 4:perl-5.16.3-295.el7.x86_64                               27/34
+    prometheus:  
+    prometheus:   Installing : gpm-libs-1.20.7-6.el7.x86_64                               28/34
+    prometheus:  
+    prometheus:   Installing : 2:vim-filesystem-7.4.629-6.el7.x86_64                      29/34
+    prometheus:  
+    prometheus:   Installing : 2:vim-common-7.4.629-6.el7.x86_64                          30/34
+    prometheus:  
+    prometheus:   Installing : 2:vim-enhanced-7.4.629-6.el7.x86_64                        31/34
+    prometheus:  
+    prometheus:   Installing : wget-1.14-18.el7_6.1.x86_64                                32/34
+    prometheus:  
+    prometheus:   Installing : puppet-agent-5.5.21-1.el7.x86_64                           33/34
+    prometheus:  
+    prometheus:   Installing : epel-release-7-11.noarch                                   34/34
+    prometheus:  
+    prometheus:   Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                           1/34
+    prometheus:  
+    prometheus:   Verifying  : perl-threads-shared-1.43-6.el7.x86_64                       2/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Storable-2.45-3.el7.x86_64                             3/34
+    prometheus:  
+    prometheus:   Verifying  : 1:perl-Pod-Escapes-1.04-295.el7.noarch                      4/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Exporter-5.68-3.el7.noarch                             5/34
+    prometheus:  
+    prometheus:   Verifying  : perl-constant-1.27-2.el7.noarch                             6/34
+    prometheus:  
+    prometheus:   Verifying  : perl-PathTools-3.40-5.el7.x86_64                            7/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Socket-2.010-5.el7.x86_64                              8/34
+    prometheus:  
+    prometheus:   Verifying  : 1:perl-parent-0.225-244.el7.noarch                          9/34
+    prometheus:  
+    prometheus:   Verifying  : epel-release-7-11.noarch                                   10/34
+    prometheus:  
+    prometheus:   Verifying  : 4:perl-libs-5.16.3-295.el7.x86_64                          11/34
+    prometheus:  
+    prometheus:   Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                        12/34
+    prometheus:  
+    prometheus:   Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                        13/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Time-Local-1.2300-2.el7.noarch                        14/34
+    prometheus:  
+    prometheus:   Verifying  : puppet-agent-5.5.21-1.el7.x86_64                           15/34
+    prometheus:  
+    prometheus:   Verifying  : 4:perl-macros-5.16.3-295.el7.x86_64                        16/34
+    prometheus:  
+    prometheus:   Verifying  : 4:perl-5.16.3-295.el7.x86_64                               17/34
+    prometheus:  
+    prometheus:   Verifying  : 2:vim-enhanced-7.4.629-6.el7.x86_64                        18/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Carp-1.26-244.el7.noarch                              19/34
+    prometheus:  
+    prometheus:   Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      20/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 21/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                           22/34
+    prometheus:  
+    prometheus:   Verifying  : 2:vim-common-7.4.629-6.el7.x86_64                          23/34
+    prometheus:  
+    prometheus:   Verifying  : 2:vim-filesystem-7.4.629-6.el7.x86_64                      24/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Encode-2.51-7.el7.x86_64                              25/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                         26/34
+    prometheus:  
+    prometheus:   Verifying  : perl-podlators-2.5.1-3.el7.noarch                          27/34
+    prometheus:  
+    prometheus:   Verifying  : perl-File-Path-2.09-2.el7.noarch                           28/34
+    prometheus:  
+    prometheus:   Verifying  : perl-threads-1.87-4.el7.x86_64                             29/34
+    prometheus:  
+    prometheus:   Verifying  : gpm-libs-1.20.7-6.el7.x86_64                               30/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Filter-1.49-3.el7.x86_64                              31/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                         32/34
+    prometheus:  
+    prometheus:   Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                     33/34
+    prometheus:  
+    prometheus:   Verifying  : wget-1.14-18.el7_6.1.x86_64                                34/34
+    prometheus:  
+    prometheus: 
+    prometheus: Installed:
+    prometheus:   epel-release.noarch 0:7-11              puppet-agent.x86_64 0:5.5.21-1.el7    
+    prometheus:   vim-enhanced.x86_64 2:7.4.629-6.el7     wget.x86_64 0:1.14-18.el7_6.1         
+    prometheus: 
+    prometheus: Dependency Installed:
+    prometheus:   gpm-libs.x86_64 0:1.20.7-6.el7                                                
+    prometheus:   perl.x86_64 4:5.16.3-295.el7                                                  
+    prometheus:   perl-Carp.noarch 0:1.26-244.el7                                               
+    prometheus:   perl-Encode.x86_64 0:2.51-7.el7                                               
+    prometheus:   perl-Exporter.noarch 0:5.68-3.el7                                             
+    prometheus:   perl-File-Path.noarch 0:2.09-2.el7                                            
+    prometheus:   perl-File-Temp.noarch 0:0.23.01-3.el7                                         
+    prometheus:   perl-Filter.x86_64 0:1.49-3.el7                                               
+    prometheus:   perl-Getopt-Long.noarch 0:2.40-3.el7                                          
+    prometheus:   perl-HTTP-Tiny.noarch 0:0.033-3.el7                                           
+    prometheus:   perl-PathTools.x86_64 0:3.40-5.el7                                            
+    prometheus:   perl-Pod-Escapes.noarch 1:1.04-295.el7                                        
+    prometheus:   perl-Pod-Perldoc.noarch 0:3.20-4.el7                                          
+    prometheus:   perl-Pod-Simple.noarch 1:3.28-4.el7                                           
+    prometheus:   perl-Pod-Usage.noarch 0:1.63-3.el7                                            
+    prometheus:   perl-Scalar-List-Utils.x86_64 0:1.27-248.el7                                  
+    prometheus:   perl-Socket.x86_64 0:2.010-5.el7                                              
+    prometheus:   perl-Storable.x86_64 0:2.45-3.el7                                             
+    prometheus:   perl-Text-ParseWords.noarch 0:3.29-4.el7                                      
+    prometheus:   perl-Time-HiRes.x86_64 4:1.9725-3.el7                                         
+    prometheus:   perl-Time-Local.noarch 0:1.2300-2.el7                                         
+    prometheus:   perl-constant.noarch 0:1.27-2.el7                                             
+    prometheus:   perl-libs.x86_64 4:5.16.3-295.el7                                             
+    prometheus:   perl-macros.x86_64 4:5.16.3-295.el7                                           
+    prometheus:   perl-parent.noarch 1:0.225-244.el7                                            
+    prometheus:   perl-podlators.noarch 0:2.5.1-3.el7                                           
+    prometheus:   perl-threads.x86_64 0:1.87-4.el7                                              
+    prometheus:   perl-threads-shared.x86_64 0:1.43-6.el7                                       
+    prometheus:   vim-common.x86_64 2:7.4.629-6.el7                                             
+    prometheus:   vim-filesystem.x86_64 2:7.4.629-6.el7                                         
+    prometheus: 
+    prometheus: Complete!
+    prometheus: Created symlink from /etc/systemd/system/multi-user.target.wants/puppet.service to /usr/lib/systemd/system/puppet.service.
+==> 4flix: Importing base box 'centos/7'...
+[KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> 4flix: Matching MAC address for NAT networking...
+==> 4flix: Setting the name of the VM: vagrant_4flix_1596564944834_95353
+==> 4flix: Fixed port collision for 22 => 2222. Now on port 2202.
+==> 4flix: Clearing any previously set network interfaces...
+==> 4flix: Preparing network interfaces based on configuration...
+    4flix: Adapter 1: nat
+    4flix: Adapter 2: hostonly
+==> 4flix: Forwarding ports...
+    4flix: 22 (guest) => 2202 (host) (adapter 1)
+==> 4flix: Running 'pre-boot' VM customizations...
+==> 4flix: Booting VM...
+==> 4flix: Waiting for machine to boot. This may take a few minutes...
+    4flix: SSH address: 127.0.0.1:2202
+    4flix: SSH username: vagrant
+    4flix: SSH auth method: private key
+    4flix: 
+    4flix: Vagrant insecure key detected. Vagrant will automatically replace
+    4flix: this with a newly generated keypair for better security.
+    4flix: 
+    4flix: Inserting generated public key within guest...
+    4flix: Removing insecure key from the guest if it's present...
+    4flix: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> 4flix: Machine booted and ready!
+==> 4flix: Checking for guest additions in VM...
+    4flix: No guest additions were detected on the base box for this VM! Guest
+    4flix: additions are required for forwarded ports, shared folders, host only
+    4flix: networking, and more. If SSH fails on this machine, please install
+    4flix: the guest additions and repackage the box to continue.
+    4flix: 
+    4flix: This is not an error message; everything may continue to work properly,
+    4flix: in which case you may ignore this message.
+==> 4flix: Setting hostname...
+==> 4flix: Configuring and enabling network interfaces...
+==> 4flix: Rsyncing folder: /home/king/vagrant/ => /vagrant
+==> 4flix: Running provisioner: shell...
+    4flix: Running: inline script
+==> 4flix: Running provisioner: shell...
+    4flix: Running: inline script
+    4flix: warning: /var/tmp/rpm-tmp.rzuxHu: Header V4 RSA/SHA256 Signature, key ID ef8d349f: NOKEY
+    4flix: Retrieving https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
+    4flix: Preparing...                          ########################################
+    4flix: Updating / installing...
+    4flix: puppet5-release-5.0.0-11.el7          ########################################
+    4flix: Loaded plugins: fastestmirror
+    4flix: Determining fastest mirrors
+    4flix:  * base: mirror.globo.com
+    4flix:  * extras: mirror.globo.com
+    4flix:  * updates: mirror.globo.com
+    4flix: Package python-2.7.5-88.el7.x86_64 already installed and latest version
+    4flix: Resolving Dependencies
+    4flix: --> Running transaction check
+    4flix: ---> Package device-mapper-persistent-data.x86_64 0:0.8.5-2.el7 will be installed
+    4flix: --> Processing Dependency: libaio.so.1(LIBAIO_0.4)(64bit) for package: device-mapper-persistent-data-0.8.5-2.el7.x86_64
+    4flix: --> Processing Dependency: libaio.so.1(LIBAIO_0.1)(64bit) for package: device-mapper-persistent-data-0.8.5-2.el7.x86_64
+    4flix: --> Processing Dependency: libaio.so.1()(64bit) for package: device-mapper-persistent-data-0.8.5-2.el7.x86_64
+    4flix: ---> Package epel-release.noarch 0:7-11 will be installed
+    4flix: ---> Package git.x86_64 0:1.8.3.1-23.el7_8 will be installed
+    4flix: --> Processing Dependency: perl-Git = 1.8.3.1-23.el7_8 for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl >= 5.008 for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(warnings) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(vars) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(strict) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(lib) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(Git) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(Getopt::Long) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(File::stat) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(File::Temp) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(File::Spec) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(File::Path) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(File::Find) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(File::Copy) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(File::Basename) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(Exporter) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: perl(Error) for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: --> Processing Dependency: /usr/bin/perl for package: git-1.8.3.1-23.el7_8.x86_64
+    4flix: ---> Package java-1.8.0-openjdk.x86_64 1:1.8.0.252.b09-2.el7_8 will be installed
+    4flix: --> Processing Dependency: java-1.8.0-openjdk-headless(x86-64) = 1:1.8.0.252.b09-2.el7_8 for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: xorg-x11-fonts-Type1 for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libjvm.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libjava.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libXcomposite(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: gtk2(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: fontconfig(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libjvm.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libjpeg.so.62()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libjava.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libgif.so.4()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: ---> Package lvm2.x86_64 7:2.02.186-7.el7_8.2 will be installed
+    4flix: --> Processing Dependency: lvm2-libs = 7:2.02.186-7.el7_8.2 for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    4flix: --> Processing Dependency: liblvm2app.so.2.2(Base)(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    4flix: --> Processing Dependency: libdevmapper-event.so.1.02(Base)(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    4flix: --> Processing Dependency: liblvm2app.so.2.2()(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    4flix: --> Processing Dependency: libdevmapper-event.so.1.02()(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    4flix: ---> Package puppet-agent.x86_64 0:5.5.21-1.el7 will be installed
+    4flix: ---> Package unzip.x86_64 0:6.0-21.el7 will be installed
+    4flix: ---> Package vim-enhanced.x86_64 2:7.4.629-6.el7 will be installed
+    4flix: --> Processing Dependency: vim-common = 2:7.4.629-6.el7 for package: 2:vim-enhanced-7.4.629-6.el7.x86_64
+    4flix: --> Processing Dependency: libperl.so()(64bit) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64
+    4flix: --> Processing Dependency: libgpm.so.2()(64bit) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64
+    4flix: ---> Package wget.x86_64 0:1.14-18.el7_6.1 will be installed
+    4flix: ---> Package yum-utils.noarch 0:1.1.31-53.el7 will be updated
+    4flix: ---> Package yum-utils.noarch 0:1.1.31-54.el7_8 will be an update
+    4flix: --> Running transaction check
+    4flix: ---> Package alsa-lib.x86_64 0:1.1.8-1.el7 will be installed
+    4flix: ---> Package device-mapper-event-libs.x86_64 7:1.02.164-7.el7_8.2 will be installed
+    4flix: ---> Package fontconfig.x86_64 0:2.13.0-4.3.el7 will be installed
+    4flix: --> Processing Dependency: fontpackages-filesystem for package: fontconfig-2.13.0-4.3.el7.x86_64
+    4flix: --> Processing Dependency: dejavu-sans-fonts for package: fontconfig-2.13.0-4.3.el7.x86_64
+    4flix: ---> Package giflib.x86_64 0:4.1.6-9.el7 will be installed
+    4flix: --> Processing Dependency: libSM.so.6()(64bit) for package: giflib-4.1.6-9.el7.x86_64
+    4flix: --> Processing Dependency: libICE.so.6()(64bit) for package: giflib-4.1.6-9.el7.x86_64
+    4flix: ---> Package gpm-libs.x86_64 0:1.20.7-6.el7 will be installed
+    4flix: ---> Package gtk2.x86_64 0:2.24.31-1.el7 will be installed
+    4flix: --> Processing Dependency: pango >= 1.20.0-1 for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libtiff >= 3.6.1 for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libXrandr >= 1.2.99.4-2 for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: atk >= 1.29.4-2 for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: hicolor-icon-theme for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: gtk-update-icon-cache for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libpango-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libcairo.so.2()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libatk-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libXrandr.so.2()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libXinerama.so.1()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libXfixes.so.3()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libXdamage.so.1()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: --> Processing Dependency: libXcursor.so.1()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+    4flix: ---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.252.b09-2.el7_8 will be installed
+    4flix: --> Processing Dependency: tzdata-java >= 2015d for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: copy-jdk-configs >= 3.3 for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: pcsc-lite-libs(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: lksctp-tools(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: --> Processing Dependency: jpackage-utils for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.el7_8.x86_64
+    4flix: ---> Package libX11.x86_64 0:1.6.7-2.el7 will be installed
+    4flix: --> Processing Dependency: libX11-common >= 1.6.7-2.el7 for package: libX11-1.6.7-2.el7.x86_64
+    4flix: --> Processing Dependency: libxcb.so.1()(64bit) for package: libX11-1.6.7-2.el7.x86_64
+    4flix: ---> Package libXcomposite.x86_64 0:0.4.4-4.1.el7 will be installed
+    4flix: ---> Package libXext.x86_64 0:1.3.3-3.el7 will be installed
+    4flix: ---> Package libXi.x86_64 0:1.7.9-1.el7 will be installed
+    4flix: ---> Package libXrender.x86_64 0:0.9.10-1.el7 will be installed
+    4flix: ---> Package libXtst.x86_64 0:1.2.3-1.el7 will be installed
+    4flix: ---> Package libaio.x86_64 0:0.3.109-13.el7 will be installed
+    4flix: ---> Package libjpeg-turbo.x86_64 0:1.2.90-8.el7 will be installed
+    4flix: ---> Package lvm2-libs.x86_64 7:2.02.186-7.el7_8.2 will be installed
+    4flix: --> Processing Dependency: device-mapper-event = 7:1.02.164-7.el7_8.2 for package: 7:lvm2-libs-2.02.186-7.el7_8.2.x86_64
+    4flix: ---> Package perl.x86_64 4:5.16.3-295.el7 will be installed
+    4flix: --> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl-macros for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: --> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-295.el7.x86_64
+    4flix: ---> Package perl-Error.noarch 1:0.17020-2.el7 will be installed
+    4flix: ---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
+    4flix: ---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
+    4flix: ---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
+    4flix: ---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed
+    4flix: --> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch
+    4flix: --> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch
+    4flix: ---> Package perl-Git.noarch 0:1.8.3.1-23.el7_8 will be installed
+    4flix: ---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
+    4flix: ---> Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed
+    4flix: ---> Package perl-libs.x86_64 4:5.16.3-295.el7 will be installed
+    4flix: ---> Package vim-common.x86_64 2:7.4.629-6.el7 will be installed
+    4flix: --> Processing Dependency: vim-filesystem for package: 2:vim-common-7.4.629-6.el7.x86_64
+    4flix: ---> Package xorg-x11-fonts-Type1.noarch 0:7.5-9.el7 will be installed
+    4flix: --> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch
+    4flix: --> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch
+    4flix: --> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch
+    4flix: --> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch
+    4flix: --> Running transaction check
+    4flix: ---> Package atk.x86_64 0:2.28.1-2.el7 will be installed
+    4flix: ---> Package cairo.x86_64 0:1.15.12-4.el7 will be installed
+    4flix: --> Processing Dependency: libpixman-1.so.0()(64bit) for package: cairo-1.15.12-4.el7.x86_64
+    4flix: --> Processing Dependency: libGL.so.1()(64bit) for package: cairo-1.15.12-4.el7.x86_64
+    4flix: --> Processing Dependency: libEGL.so.1()(64bit) for package: cairo-1.15.12-4.el7.x86_64
+    4flix: ---> Package copy-jdk-configs.noarch 0:3.3-10.el7_5 will be installed
+    4flix: ---> Package dejavu-sans-fonts.noarch 0:2.33-6.el7 will be installed
+    4flix: --> Processing Dependency: dejavu-fonts-common = 2.33-6.el7 for package: dejavu-sans-fonts-2.33-6.el7.noarch
+    4flix: ---> Package device-mapper-event.x86_64 7:1.02.164-7.el7_8.2 will be installed
+    4flix: --> Processing Dependency: device-mapper = 7:1.02.164-7.el7_8.2 for package: 7:device-mapper-event-1.02.164-7.el7_8.2.x86_64
+    4flix: ---> Package fontpackages-filesystem.noarch 0:1.44-8.el7 will be installed
+    4flix: ---> Package gdk-pixbuf2.x86_64 0:2.36.12-3.el7 will be installed
+    4flix: --> Processing Dependency: libjasper.so.1()(64bit) for package: gdk-pixbuf2-2.36.12-3.el7.x86_64
+    4flix: ---> Package gtk-update-icon-cache.x86_64 0:3.22.30-5.el7 will be installed
+    4flix: ---> Package hicolor-icon-theme.noarch 0:0.12-7.el7 will be installed
+    4flix: ---> Package javapackages-tools.noarch 0:3.4.1-11.el7 will be installed
+    4flix: --> Processing Dependency: python-javapackages = 3.4.1-11.el7 for package: javapackages-tools-3.4.1-11.el7.noarch
+    4flix: ---> Package libICE.x86_64 0:1.0.9-9.el7 will be installed
+    4flix: ---> Package libSM.x86_64 0:1.2.2-2.el7 will be installed
+    4flix: ---> Package libX11-common.noarch 0:1.6.7-2.el7 will be installed
+    4flix: ---> Package libXcursor.x86_64 0:1.1.15-1.el7 will be installed
+    4flix: ---> Package libXdamage.x86_64 0:1.1.4-4.1.el7 will be installed
+    4flix: ---> Package libXfixes.x86_64 0:5.0.3-1.el7 will be installed
+    4flix: ---> Package libXinerama.x86_64 0:1.1.3-2.1.el7 will be installed
+    4flix: ---> Package libXrandr.x86_64 0:1.5.1-2.el7 will be installed
+    4flix: ---> Package libtiff.x86_64 0:4.0.3-32.el7 will be installed
+    4flix: --> Processing Dependency: libjbig.so.2.0()(64bit) for package: libtiff-4.0.3-32.el7.x86_64
+    4flix: ---> Package libxcb.x86_64 0:1.13-1.el7 will be installed
+    4flix: --> Processing Dependency: libXau.so.6()(64bit) for package: libxcb-1.13-1.el7.x86_64
+    4flix: ---> Package lksctp-tools.x86_64 0:1.0.17-2.el7 will be installed
+    4flix: ---> Package pango.x86_64 0:1.42.4-4.el7_7 will be installed
+    4flix: --> Processing Dependency: libthai(x86-64) >= 0.1.9 for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: --> Processing Dependency: libXft(x86-64) >= 2.0.0 for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: --> Processing Dependency: harfbuzz(x86-64) >= 1.4.2 for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: --> Processing Dependency: fribidi(x86-64) >= 1.0 for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: --> Processing Dependency: libthai.so.0(LIBTHAI_0.1)(64bit) for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: --> Processing Dependency: libthai.so.0()(64bit) for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: --> Processing Dependency: libharfbuzz.so.0()(64bit) for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: --> Processing Dependency: libfribidi.so.0()(64bit) for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: --> Processing Dependency: libXft.so.2()(64bit) for package: pango-1.42.4-4.el7_7.x86_64
+    4flix: ---> Package pcsc-lite-libs.x86_64 0:1.8.8-8.el7 will be installed
+    4flix: ---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
+    4flix: ---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
+    4flix: ---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
+    4flix: --> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+    4flix: --> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+    4flix: ---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
+    4flix: --> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
+    4flix: --> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
+    4flix: ---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
+    4flix: ---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed
+    4flix: ---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
+    4flix: ---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
+    4flix: ---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
+    4flix: ---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
+    4flix: ---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
+    4flix: ---> Package perl-macros.x86_64 4:5.16.3-295.el7 will be installed
+    4flix: ---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
+    4flix: ---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
+    4flix: ---> Package ttmkfdir.x86_64 0:3.0.9-42.el7 will be installed
+    4flix: ---> Package tzdata-java.noarch 0:2020a-1.el7 will be installed
+    4flix: ---> Package vim-filesystem.x86_64 2:7.4.629-6.el7 will be installed
+    4flix: ---> Package xorg-x11-font-utils.x86_64 1:7.5-21.el7 will be installed
+    4flix: --> Processing Dependency: libfontenc.so.1()(64bit) for package: 1:xorg-x11-font-utils-7.5-21.el7.x86_64
+    4flix: --> Running transaction check
+    4flix: ---> Package dejavu-fonts-common.noarch 0:2.33-6.el7 will be installed
+    4flix: ---> Package device-mapper.x86_64 7:1.02.164-7.el7_8.1 will be updated
+    4flix: --> Processing Dependency: device-mapper = 7:1.02.164-7.el7_8.1 for package: 7:device-mapper-libs-1.02.164-7.el7_8.1.x86_64
+    4flix: ---> Package device-mapper.x86_64 7:1.02.164-7.el7_8.2 will be an update
+    4flix: ---> Package fribidi.x86_64 0:1.0.2-1.el7_7.1 will be installed
+    4flix: ---> Package harfbuzz.x86_64 0:1.7.5-2.el7 will be installed
+    4flix: --> Processing Dependency: libgraphite2.so.3()(64bit) for package: harfbuzz-1.7.5-2.el7.x86_64
+    4flix: ---> Package jasper-libs.x86_64 0:1.900.1-33.el7 will be installed
+    4flix: ---> Package jbigkit-libs.x86_64 0:2.0-11.el7 will be installed
+    4flix: ---> Package libXau.x86_64 0:1.0.8-2.1.el7 will be installed
+    4flix: ---> Package libXft.x86_64 0:2.3.2-2.el7 will be installed
+    4flix: ---> Package libfontenc.x86_64 0:1.1.3-3.el7 will be installed
+    4flix: ---> Package libglvnd-egl.x86_64 1:1.0.1-0.8.git5baa1e5.el7 will be installed
+    4flix: --> Processing Dependency: libglvnd(x86-64) = 1:1.0.1-0.8.git5baa1e5.el7 for package: 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64
+    4flix: --> Processing Dependency: mesa-libEGL(x86-64) >= 13.0.4-1 for package: 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64
+    4flix: --> Processing Dependency: libGLdispatch.so.0()(64bit) for package: 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64
+    4flix: ---> Package libglvnd-glx.x86_64 1:1.0.1-0.8.git5baa1e5.el7 will be installed
+    4flix: --> Processing Dependency: mesa-libGL(x86-64) >= 13.0.4-1 for package: 1:libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64
+    4flix: ---> Package libthai.x86_64 0:0.1.14-9.el7 will be installed
+    4flix: ---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
+    4flix: ---> Package perl-Pod-Escapes.noarch 1:1.04-295.el7 will be installed
+    4flix: ---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
+    4flix: --> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+    4flix: --> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+    4flix: ---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
+    4flix: ---> Package pixman.x86_64 0:0.34.0-1.el7 will be installed
+    4flix: ---> Package python-javapackages.noarch 0:3.4.1-11.el7 will be installed
+    4flix: --> Processing Dependency: python-lxml for package: python-javapackages-3.4.1-11.el7.noarch
+    4flix: --> Running transaction check
+    4flix: ---> Package device-mapper-libs.x86_64 7:1.02.164-7.el7_8.1 will be updated
+    4flix: ---> Package device-mapper-libs.x86_64 7:1.02.164-7.el7_8.2 will be an update
+    4flix: ---> Package graphite2.x86_64 0:1.3.10-1.el7_3 will be installed
+    4flix: ---> Package libglvnd.x86_64 1:1.0.1-0.8.git5baa1e5.el7 will be installed
+    4flix: ---> Package mesa-libEGL.x86_64 0:18.3.4-7.el7_8.1 will be installed
+    4flix: --> Processing Dependency: mesa-libgbm = 18.3.4-7.el7_8.1 for package: mesa-libEGL-18.3.4-7.el7_8.1.x86_64
+    4flix: --> Processing Dependency: libxshmfence.so.1()(64bit) for package: mesa-libEGL-18.3.4-7.el7_8.1.x86_64
+    4flix: --> Processing Dependency: libwayland-server.so.0()(64bit) for package: mesa-libEGL-18.3.4-7.el7_8.1.x86_64
+    4flix: --> Processing Dependency: libwayland-client.so.0()(64bit) for package: mesa-libEGL-18.3.4-7.el7_8.1.x86_64
+    4flix: --> Processing Dependency: libglapi.so.0()(64bit) for package: mesa-libEGL-18.3.4-7.el7_8.1.x86_64
+    4flix: --> Processing Dependency: libgbm.so.1()(64bit) for package: mesa-libEGL-18.3.4-7.el7_8.1.x86_64
+    4flix: ---> Package mesa-libGL.x86_64 0:18.3.4-7.el7_8.1 will be installed
+    4flix: --> Processing Dependency: libXxf86vm.so.1()(64bit) for package: mesa-libGL-18.3.4-7.el7_8.1.x86_64
+    4flix: ---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
+    4flix: ---> Package perl-parent.noarch 1:0.225-244.el7 will be installed
+    4flix: ---> Package python-lxml.x86_64 0:3.2.1-4.el7 will be installed
+    4flix: --> Running transaction check
+    4flix: ---> Package libXxf86vm.x86_64 0:1.1.4-1.el7 will be installed
+    4flix: ---> Package libwayland-client.x86_64 0:1.15.0-1.el7 will be installed
+    4flix: ---> Package libwayland-server.x86_64 0:1.15.0-1.el7 will be installed
+    4flix: ---> Package libxshmfence.x86_64 0:1.2-1.el7 will be installed
+    4flix: ---> Package mesa-libgbm.x86_64 0:18.3.4-7.el7_8.1 will be installed
+    4flix: ---> Package mesa-libglapi.x86_64 0:18.3.4-7.el7_8.1 will be installed
+    4flix: --> Finished Dependency Resolution
+    4flix: 
+    4flix: Dependencies Resolved
+    4flix: 
+    4flix: ================================================================================
+    4flix:  Package                       Arch   Version                     Repository
+    4flix:                                                                            Size
+    4flix: ================================================================================
+    4flix: Installing:
+    4flix:  device-mapper-persistent-data x86_64 0.8.5-2.el7                 base    422 k
+    4flix:  epel-release                  noarch 7-11                        extras   15 k
+    4flix:  git                           x86_64 1.8.3.1-23.el7_8            updates 4.4 M
+    4flix:  java-1.8.0-openjdk            x86_64 1:1.8.0.252.b09-2.el7_8     updates 295 k
+    4flix:  lvm2                          x86_64 7:2.02.186-7.el7_8.2        updates 1.3 M
+    4flix:  puppet-agent                  x86_64 5.5.21-1.el7                puppet5  22 M
+    4flix:  unzip                         x86_64 6.0-21.el7                  base    171 k
+    4flix:  vim-enhanced                  x86_64 2:7.4.629-6.el7             base    1.1 M
+    4flix:  wget                          x86_64 1.14-18.el7_6.1             base    547 k
+    4flix: Updating:
+    4flix:  yum-utils                     noarch 1.1.31-54.el7_8             updates 122 k
+    4flix: Installing for dependencies:
+    4flix:  alsa-lib                      x86_64 1.1.8-1.el7                 base    425 k
+    4flix:  atk                           x86_64 2.28.1-2.el7                base    263 k
+    4flix:  cairo                         x86_64 1.15.12-4.el7               base    741 k
+    4flix:  copy-jdk-configs              noarch 3.3-10.el7_5                base     21 k
+    4flix:  dejavu-fonts-common           noarch 2.33-6.el7                  base     64 k
+    4flix:  dejavu-sans-fonts             noarch 2.33-6.el7                  base    1.4 M
+    4flix:  device-mapper-event           x86_64 7:1.02.164-7.el7_8.2        updates 191 k
+    4flix:  device-mapper-event-libs      x86_64 7:1.02.164-7.el7_8.2        updates 190 k
+    4flix:  fontconfig                    x86_64 2.13.0-4.3.el7              base    254 k
+    4flix:  fontpackages-filesystem       noarch 1.44-8.el7                  base    9.9 k
+    4flix:  fribidi                       x86_64 1.0.2-1.el7_7.1             base     79 k
+    4flix:  gdk-pixbuf2                   x86_64 2.36.12-3.el7               base    570 k
+    4flix:  giflib                        x86_64 4.1.6-9.el7                 base     40 k
+    4flix:  gpm-libs                      x86_64 1.20.7-6.el7                base     32 k
+    4flix:  graphite2                     x86_64 1.3.10-1.el7_3              base    115 k
+    4flix:  gtk-update-icon-cache         x86_64 3.22.30-5.el7               base     27 k
+    4flix:  gtk2                          x86_64 2.24.31-1.el7               base    3.4 M
+    4flix:  harfbuzz                      x86_64 1.7.5-2.el7                 base    267 k
+    4flix:  hicolor-icon-theme            noarch 0.12-7.el7                  base     42 k
+    4flix:  jasper-libs                   x86_64 1.900.1-33.el7              base    150 k
+    4flix:  java-1.8.0-openjdk-headless   x86_64 1:1.8.0.252.b09-2.el7_8     updates  32 M
+    4flix:  javapackages-tools            noarch 3.4.1-11.el7                base     73 k
+    4flix:  jbigkit-libs                  x86_64 2.0-11.el7                  base     46 k
+    4flix:  libICE                        x86_64 1.0.9-9.el7                 base     66 k
+    4flix:  libSM                         x86_64 1.2.2-2.el7                 base     39 k
+    4flix:  libX11                        x86_64 1.6.7-2.el7                 base    607 k
+    4flix:  libX11-common                 noarch 1.6.7-2.el7                 base    164 k
+    4flix:  libXau                        x86_64 1.0.8-2.1.el7               base     29 k
+    4flix:  libXcomposite                 x86_64 0.4.4-4.1.el7               base     22 k
+    4flix:  libXcursor                    x86_64 1.1.15-1.el7                base     30 k
+    4flix:  libXdamage                    x86_64 1.1.4-4.1.el7               base     20 k
+    4flix:  libXext                       x86_64 1.3.3-3.el7                 base     39 k
+    4flix:  libXfixes                     x86_64 5.0.3-1.el7                 base     18 k
+    4flix:  libXft                        x86_64 2.3.2-2.el7                 base     58 k
+    4flix:  libXi                         x86_64 1.7.9-1.el7                 base     40 k
+    4flix:  libXinerama                   x86_64 1.1.3-2.1.el7               base     14 k
+    4flix:  libXrandr                     x86_64 1.5.1-2.el7                 base     27 k
+    4flix:  libXrender                    x86_64 0.9.10-1.el7                base     26 k
+    4flix:  libXtst                       x86_64 1.2.3-1.el7                 base     20 k
+    4flix:  libXxf86vm                    x86_64 1.1.4-1.el7                 base     18 k
+    4flix:  libaio                        x86_64 0.3.109-13.el7              base     24 k
+    4flix:  libfontenc                    x86_64 1.1.3-3.el7                 base     31 k
+    4flix:  libglvnd                      x86_64 1:1.0.1-0.8.git5baa1e5.el7  base     89 k
+    4flix:  libglvnd-egl                  x86_64 1:1.0.1-0.8.git5baa1e5.el7  base     44 k
+    4flix:  libglvnd-glx                  x86_64 1:1.0.1-0.8.git5baa1e5.el7  base    125 k
+    4flix:  libjpeg-turbo                 x86_64 1.2.90-8.el7                base    135 k
+    4flix:  libthai                       x86_64 0.1.14-9.el7                base    187 k
+    4flix:  libtiff                       x86_64 4.0.3-32.el7                base    171 k
+    4flix:  libwayland-client             x86_64 1.15.0-1.el7                base     33 k
+    4flix:  libwayland-server             x86_64 1.15.0-1.el7                base     39 k
+    4flix:  libxcb                        x86_64 1.13-1.el7                  base    214 k
+    4flix:  libxshmfence                  x86_64 1.2-1.el7                   base    7.2 k
+    4flix:  lksctp-tools                  x86_64 1.0.17-2.el7                base     88 k
+    4flix:  lvm2-libs                     x86_64 7:2.02.186-7.el7_8.2        updates 1.1 M
+    4flix:  mesa-libEGL                   x86_64 18.3.4-7.el7_8.1            updates 109 k
+    4flix:  mesa-libGL                    x86_64 18.3.4-7.el7_8.1            updates 165 k
+    4flix:  mesa-libgbm                   x86_64 18.3.4-7.el7_8.1            updates  39 k
+    4flix:  mesa-libglapi                 x86_64 18.3.4-7.el7_8.1            updates  46 k
+    4flix:  pango                         x86_64 1.42.4-4.el7_7              base    280 k
+    4flix:  pcsc-lite-libs                x86_64 1.8.8-8.el7                 base     34 k
+    4flix:  perl                          x86_64 4:5.16.3-295.el7            base    8.0 M
+    4flix:  perl-Carp                     noarch 1.26-244.el7                base     19 k
+    4flix:  perl-Encode                   x86_64 2.51-7.el7                  base    1.5 M
+    4flix:  perl-Error                    noarch 1:0.17020-2.el7             base     32 k
+    4flix:  perl-Exporter                 noarch 5.68-3.el7                  base     28 k
+    4flix:  perl-File-Path                noarch 2.09-2.el7                  base     26 k
+    4flix:  perl-File-Temp                noarch 0.23.01-3.el7               base     56 k
+    4flix:  perl-Filter                   x86_64 1.49-3.el7                  base     76 k
+    4flix:  perl-Getopt-Long              noarch 2.40-3.el7                  base     56 k
+    4flix:  perl-Git                      noarch 1.8.3.1-23.el7_8            updates  56 k
+    4flix:  perl-HTTP-Tiny                noarch 0.033-3.el7                 base     38 k
+    4flix:  perl-PathTools                x86_64 3.40-5.el7                  base     82 k
+    4flix:  perl-Pod-Escapes              noarch 1:1.04-295.el7              base     51 k
+    4flix:  perl-Pod-Perldoc              noarch 3.20-4.el7                  base     87 k
+    4flix:  perl-Pod-Simple               noarch 1:3.28-4.el7                base    216 k
+    4flix:  perl-Pod-Usage                noarch 1.63-3.el7                  base     27 k
+    4flix:  perl-Scalar-List-Utils        x86_64 1.27-248.el7                base     36 k
+    4flix:  perl-Socket                   x86_64 2.010-5.el7                 base     49 k
+    4flix:  perl-Storable                 x86_64 2.45-3.el7                  base     77 k
+    4flix:  perl-TermReadKey              x86_64 2.30-20.el7                 base     31 k
+    4flix:  perl-Text-ParseWords          noarch 3.29-4.el7                  base     14 k
+    4flix:  perl-Time-HiRes               x86_64 4:1.9725-3.el7              base     45 k
+    4flix:  perl-Time-Local               noarch 1.2300-2.el7                base     24 k
+    4flix:  perl-constant                 noarch 1.27-2.el7                  base     19 k
+    4flix:  perl-libs                     x86_64 4:5.16.3-295.el7            base    689 k
+    4flix:  perl-macros                   x86_64 4:5.16.3-295.el7            base     44 k
+    4flix:  perl-parent                   noarch 1:0.225-244.el7             base     12 k
+    4flix:  perl-podlators                noarch 2.5.1-3.el7                 base    112 k
+    4flix:  perl-threads                  x86_64 1.87-4.el7                  base     49 k
+    4flix:  perl-threads-shared           x86_64 1.43-6.el7                  base     39 k
+    4flix:  pixman                        x86_64 0.34.0-1.el7                base    248 k
+    4flix:  python-javapackages           noarch 3.4.1-11.el7                base     31 k
+    4flix:  python-lxml                   x86_64 3.2.1-4.el7                 base    758 k
+    4flix:  ttmkfdir                      x86_64 3.0.9-42.el7                base     48 k
+    4flix:  tzdata-java                   noarch 2020a-1.el7                 updates 188 k
+    4flix:  vim-common                    x86_64 2:7.4.629-6.el7             base    5.9 M
+    4flix:  vim-filesystem                x86_64 2:7.4.629-6.el7             base     11 k
+    4flix:  xorg-x11-font-utils           x86_64 1:7.5-21.el7                base    104 k
+    4flix:  xorg-x11-fonts-Type1          noarch 7.5-9.el7                   base    521 k
+    4flix: Updating for dependencies:
+    4flix:  device-mapper                 x86_64 7:1.02.164-7.el7_8.2        updates 295 k
+    4flix:  device-mapper-libs            x86_64 7:1.02.164-7.el7_8.2        updates 324 k
+    4flix: 
+    4flix: Transaction Summary
+    4flix: ================================================================================
+    4flix: Install  9 Packages (+99 Dependent packages)
+    4flix: Upgrade  1 Package  (+ 2 Dependent packages)
+    4flix: 
+    4flix: Total download size: 95 M
+    4flix: Downloading packages:
+    4flix: No Presto metadata available for updates
+    4flix: Public key for atk-2.28.1-2.el7.x86_64.rpm is not installed
+    4flix: warning: /var/cache/yum/x86_64/7/base/packages/atk-2.28.1-2.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    4flix: Public key for device-mapper-1.02.164-7.el7_8.2.x86_64.rpm is not installed
+    4flix: Public key for epel-release-7-11.noarch.rpm is not installed
+    4flix: Public key for puppet-agent-5.5.21-1.el7.x86_64.rpm is not installed
+    4flix: warning: /var/cache/yum/x86_64/7/puppet5/packages/puppet-agent-5.5.21-1.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID ef8d349f: NOKEY
+    4flix: --------------------------------------------------------------------------------
+    4flix: Total                                              4.2 MB/s |  95 MB  00:22     
+    4flix: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    4flix: Importing GPG key 0xF4A80EB5:
+    4flix:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+    4flix:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+    4flix:  Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+    4flix:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    4flix: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppet5-release
+    4flix: Importing GPG key 0xEF8D349F:
+    4flix:  Userid     : "Puppet, Inc. Release Key (Puppet, Inc. Release Key) <release@puppet.com>"
+    4flix:  Fingerprint: 6f6b 1550 9cf8 e59e 6e46 9f32 7f43 8280 ef8d 349f
+    4flix:  Package    : puppet5-release-5.0.0-11.el7.noarch (installed)
+    4flix:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-puppet5-release
+    4flix: Running transaction check
+    4flix: Running transaction test
+    4flix: Transaction test succeeded
+    4flix: Running transaction
+    4flix: Warning: RPMDB altered outside of yum.
+    4flix:   Updating   : 7:device-mapper-1.02.164-7.el7_8.2.x86_64                  1/114
+    4flix:  
+    4flix:   Updating   : 7:device-mapper-libs-1.02.164-7.el7_8.2.x86_64             2/114
+    4flix:  
+    4flix:   Installing : libjpeg-turbo-1.2.90-8.el7.x86_64                          3/114
+    4flix:  
+    4flix:   Installing : 7:device-mapper-event-libs-1.02.164-7.el7_8.2.x86_64       4/114
+    4flix:  
+    4flix:   Installing : mesa-libglapi-18.3.4-7.el7_8.1.x86_64                      5/114
+    4flix:  
+    4flix:   Installing : libaio-0.3.109-13.el7.x86_64                               6/114
+    4flix:  
+    4flix:   Installing : fontpackages-filesystem-1.44-8.el7.noarch                  7/114
+    4flix:  
+    4flix:   Installing : libICE-1.0.9-9.el7.x86_64                                  8/114
+    4flix:  
+    4flix:   Installing : libwayland-server-1.15.0-1.el7.x86_64                      9/114
+    4flix:  
+    4flix:   Installing : libxshmfence-1.2-1.el7.x86_64                             10/114
+    4flix:  
+    4flix:   Installing : 1:libglvnd-1.0.1-0.8.git5baa1e5.el7.x86_64                11/114
+    4flix:  
+    4flix:   Installing : mesa-libgbm-18.3.4-7.el7_8.1.x86_64                       12/114
+    4flix:  
+    4flix:   Installing : libSM-1.2.2-2.el7.x86_64                                  13/114
+    4flix:  
+    4flix:   Installing : dejavu-fonts-common-2.33-6.el7.noarch                     14/114
+    4flix:  
+    4flix:   Installing : dejavu-sans-fonts-2.33-6.el7.noarch                       15/114
+    4flix:  
+    4flix:   Installing : fontconfig-2.13.0-4.3.el7.x86_64                          16/114
+    4flix:  
+    4flix:   Installing : device-mapper-persistent-data-0.8.5-2.el7.x86_64          17/114
+    4flix:  
+    4flix:   Installing : 7:device-mapper-event-1.02.164-7.el7_8.2.x86_64           18/114
+    4flix:  
+    4flix:   Installing : 7:lvm2-libs-2.02.186-7.el7_8.2.x86_64                     19/114
+    4flix:  
+    4flix:   Installing : jasper-libs-1.900.1-33.el7.x86_64                         20/114
+    4flix:  
+    4flix:   Installing : 1:perl-parent-0.225-244.el7.noarch                        21/114
+    4flix:  
+    4flix:   Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                         22/114
+    4flix:  
+    4flix:   Installing : perl-podlators-2.5.1-3.el7.noarch                         23/114
+    4flix:  
+    4flix:   Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                        24/114
+    4flix:  
+    4flix:   Installing : 1:perl-Pod-Escapes-1.04-295.el7.noarch                    25/114
+    4flix:  
+    4flix:   Installing : perl-Text-ParseWords-3.29-4.el7.noarch                    26/114
+    4flix:  
+    4flix:   Installing : perl-Encode-2.51-7.el7.x86_64                             27/114
+    4flix:  
+    4flix:   Installing : perl-Pod-Usage-1.63-3.el7.noarch                          28/114
+    4flix:  
+    4flix:   Installing : 4:perl-libs-5.16.3-295.el7.x86_64                         29/114
+    4flix:  
+    4flix:   Installing : 4:perl-macros-5.16.3-295.el7.x86_64                       30/114
+    4flix:  
+    4flix:   Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     31/114
+    4flix:  
+    4flix:   Installing : perl-threads-1.87-4.el7.x86_64                            32/114
+    4flix:  
+    4flix:   Installing : perl-Storable-2.45-3.el7.x86_64                           33/114
+    4flix:  
+    4flix:   Installing : perl-Carp-1.26-244.el7.noarch                             34/114
+    4flix:  
+    4flix:   Installing : perl-Filter-1.49-3.el7.x86_64                             35/114
+    4flix:  
+    4flix:   Installing : perl-Exporter-5.68-3.el7.noarch                           36/114
+    4flix:  
+    4flix:   Installing : perl-Time-Local-1.2300-2.el7.noarch                       37/114
+    4flix:  
+    4flix:   Installing : perl-constant-1.27-2.el7.noarch                           38/114
+    4flix:  
+    4flix:   Installing : perl-Socket-2.010-5.el7.x86_64                            39/114
+    4flix:  
+    4flix:   Installing : perl-threads-shared-1.43-6.el7.x86_64                     40/114
+    4flix:  
+    4flix:   Installing : perl-File-Temp-0.23.01-3.el7.noarch                       41/114
+    4flix:  
+    4flix:   Installing : perl-File-Path-2.09-2.el7.noarch                          42/114
+    4flix:  
+    4flix:   Installing : perl-PathTools-3.40-5.el7.x86_64                          43/114
+    4flix:  
+    4flix:   Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                44/114
+    4flix:  
+    4flix:   Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                       45/114
+    4flix:  
+    4flix:   Installing : perl-Getopt-Long-2.40-3.el7.noarch                        46/114
+    4flix:  
+    4flix:   Installing : 4:perl-5.16.3-295.el7.x86_64                              47/114
+    4flix:  
+    4flix:   Installing : 1:perl-Error-0.17020-2.el7.noarch                         48/114
+    4flix:  
+    4flix:   Installing : perl-TermReadKey-2.30-20.el7.x86_64                       49/114
+    4flix:  
+    4flix:   Installing : git-1.8.3.1-23.el7_8.x86_64                               50/114
+    4flix:  
+    4flix:   Installing : perl-Git-1.8.3.1-23.el7_8.noarch                          51/114
+    4flix:  
+    4flix:   Installing : libfontenc-1.1.3-3.el7.x86_64                             52/114
+    4flix:  
+    4flix:   Installing : 1:xorg-x11-font-utils-7.5-21.el7.x86_64                   53/114
+    4flix:  
+    4flix:   Installing : jbigkit-libs-2.0-11.el7.x86_64                            54/114
+    4flix:  
+    4flix:   Installing : libtiff-4.0.3-32.el7.x86_64                               55/114
+    4flix:  
+    4flix:   Installing : libX11-common-1.6.7-2.el7.noarch                          56/114
+    4flix:  
+    4flix:   Installing : libthai-0.1.14-9.el7.x86_64                               57/114
+    4flix:  
+    4flix:   Installing : alsa-lib-1.1.8-1.el7.x86_64                               58/114
+    4flix:  
+    4flix:   Installing : graphite2-1.3.10-1.el7_3.x86_64                           59/114
+    4flix:  
+    4flix:   Installing : harfbuzz-1.7.5-2.el7.x86_64                               60/114
+    4flix:  
+    4flix:   Installing : 2:vim-filesystem-7.4.629-6.el7.x86_64                     61/114
+    4flix:  
+    4flix:   Installing : 2:vim-common-7.4.629-6.el7.x86_64                         62/114
+    4flix:  
+    4flix:   Installing : fribidi-1.0.2-1.el7_7.1.x86_64                            63/114
+    4flix:  
+    4flix:   Installing : copy-jdk-configs-3.3-10.el7_5.noarch                      64/114
+    4flix:  
+    4flix:   Installing : hicolor-icon-theme-0.12-7.el7.noarch                      65/114
+    4flix:  
+    4flix:   Installing : ttmkfdir-3.0.9-42.el7.x86_64                              66/114
+    4flix:  
+    4flix:   Installing : xorg-x11-fonts-Type1-7.5-9.el7.noarch                     67/114
+    4flix:  
+    4flix:   Installing : libwayland-client-1.15.0-1.el7.x86_64                     68/114
+    4flix:  
+    4flix:   Installing : tzdata-java-2020a-1.el7.noarch                            69/114
+    4flix:  
+    4flix:   Installing : pixman-0.34.0-1.el7.x86_64                                70/114
+    4flix:  
+    4flix:   Installing : atk-2.28.1-2.el7.x86_64                                   71/114
+    4flix:  
+    4flix:   Installing : gpm-libs-1.20.7-6.el7.x86_64                              72/114
+    4flix:  
+    4flix:   Installing : libXau-1.0.8-2.1.el7.x86_64                               73/114
+    4flix:  
+    4flix:   Installing : libxcb-1.13-1.el7.x86_64                                  74/114
+    4flix:  
+    4flix:   Installing : libX11-1.6.7-2.el7.x86_64                                 75/114
+    4flix:  
+    4flix:   Installing : libXext-1.3.3-3.el7.x86_64                                76/114
+    4flix:  
+    4flix:   Installing : libXrender-0.9.10-1.el7.x86_64                            77/114
+    4flix:  
+    4flix:   Installing : libXfixes-5.0.3-1.el7.x86_64                              78/114
+    4flix:  
+    4flix:   Installing : libXi-1.7.9-1.el7.x86_64                                  79/114
+    4flix:  
+    4flix:   Installing : libXdamage-1.1.4-4.1.el7.x86_64                           80/114
+    4flix:  
+    4flix:   Installing : libXcomposite-0.4.4-4.1.el7.x86_64                        81/114
+    4flix:  
+    4flix:   Installing : gdk-pixbuf2-2.36.12-3.el7.x86_64                          82/114
+    4flix:  
+    4flix:   Installing : gtk-update-icon-cache-3.22.30-5.el7.x86_64                83/114
+    4flix:  
+    4flix:   Installing : libXtst-1.2.3-1.el7.x86_64                                84/114
+    4flix:  
+    4flix:   Installing : libXcursor-1.1.15-1.el7.x86_64                            85/114
+    4flix:  
+    4flix:   Installing : libXrandr-1.5.1-2.el7.x86_64                              86/114
+    4flix:  
+    4flix:   Installing : libXft-2.3.2-2.el7.x86_64                                 87/114
+    4flix:  
+    4flix:   Installing : libXinerama-1.1.3-2.1.el7.x86_64                          88/114
+    4flix:  
+    4flix:   Installing : libXxf86vm-1.1.4-1.el7.x86_64                             89/114
+    4flix:  
+    4flix:   Installing : 1:libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64            90/114
+    4flix:  
+    4flix:   Installing : mesa-libGL-18.3.4-7.el7_8.1.x86_64                        91/114
+    4flix:  
+    4flix:   Installing : giflib-4.1.6-9.el7.x86_64                                 92/114
+    4flix:  
+    4flix:   Installing : mesa-libEGL-18.3.4-7.el7_8.1.x86_64                       93/114
+    4flix:  
+    4flix:   Installing : 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64            94/114
+    4flix:  
+    4flix:   Installing : cairo-1.15.12-4.el7.x86_64                                95/114
+    4flix:  
+    4flix:   Installing : pango-1.42.4-4.el7_7.x86_64                               96/114
+    4flix:  
+    4flix:   Installing : gtk2-2.24.31-1.el7.x86_64                                 97/114
+    4flix:  
+    4flix:   Installing : pcsc-lite-libs-1.8.8-8.el7.x86_64                         98/114
+    4flix:  
+    4flix:   Installing : lksctp-tools-1.0.17-2.el7.x86_64                          99/114
+    4flix:  
+    4flix:   Installing : python-lxml-3.2.1-4.el7.x86_64                           100/114
+    4flix:  
+    4flix:   Installing : python-javapackages-3.4.1-11.el7.noarch                  101/114
+    4flix:  
+    4flix:   Installing : javapackages-tools-3.4.1-11.el7.noarch                   102/114
+    4flix:  
+    4flix:   Installing : 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.el7_8.x8   103/114
+    4flix:  
+    4flix:   Installing : 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64        104/114
+    4flix:  
+    4flix:   Installing : 2:vim-enhanced-7.4.629-6.el7.x86_64                      105/114
+    4flix:  
+    4flix:   Installing : 7:lvm2-2.02.186-7.el7_8.2.x86_64                         106/114
+    4flix:  
+    4flix:   Installing : puppet-agent-5.5.21-1.el7.x86_64                         107/114
+    4flix:  
+    4flix:   Installing : wget-1.14-18.el7_6.1.x86_64                              108/114
+    4flix:  
+    4flix:   Updating   : yum-utils-1.1.31-54.el7_8.noarch                         109/114
+    4flix:  
+    4flix:   Installing : unzip-6.0-21.el7.x86_64                                  110/114
+    4flix:  
+    4flix:   Installing : epel-release-7-11.noarch                                 111/114
+    4flix:  
+    4flix:   Cleanup    : yum-utils-1.1.31-53.el7.noarch                           112/114
+    4flix:  
+    4flix:   Cleanup    : 7:device-mapper-1.02.164-7.el7_8.1.x86_64                113/114
+    4flix:  
+    4flix:   Cleanup    : 7:device-mapper-libs-1.02.164-7.el7_8.1.x86_64           114/114
+    4flix:  
+    4flix:   Verifying  : libXext-1.3.3-3.el7.x86_64                                 1/114
+    4flix:  
+    4flix:   Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                          2/114
+    4flix:  
+    4flix:   Verifying  : libXi-1.7.9-1.el7.x86_64                                   3/114
+    4flix:  
+    4flix:   Verifying  : libXrender-0.9.10-1.el7.x86_64                             4/114
+    4flix:  
+    4flix:   Verifying  : 1:xorg-x11-font-utils-7.5-21.el7.x86_64                    5/114
+    4flix:  
+    4flix:   Verifying  : mesa-libGL-18.3.4-7.el7_8.1.x86_64                         6/114
+    4flix:  
+    4flix:   Verifying  : python-lxml-3.2.1-4.el7.x86_64                             7/114
+    4flix:  
+    4flix:   Verifying  : gtk-update-icon-cache-3.22.30-5.el7.x86_64                 8/114
+    4flix:  
+    4flix:   Verifying  : git-1.8.3.1-23.el7_8.x86_64                                9/114
+    4flix:  
+    4flix:   Verifying  : epel-release-7-11.noarch                                  10/114
+    4flix:  
+    4flix:   Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                       11/114
+    4flix:  
+    4flix:   Verifying  : python-javapackages-3.4.1-11.el7.noarch                   12/114
+    4flix:  
+    4flix:   Verifying  : 4:perl-libs-5.16.3-295.el7.x86_64                         13/114
+    4flix:  
+    4flix:   Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                       14/114
+    4flix:  
+    4flix:   Verifying  : libXcomposite-0.4.4-4.1.el7.x86_64                        15/114
+    4flix:  
+    4flix:   Verifying  : perl-Time-Local-1.2300-2.el7.noarch                       16/114
+    4flix:  
+    4flix:   Verifying  : lksctp-tools-1.0.17-2.el7.x86_64                          17/114
+    4flix:  
+    4flix:   Verifying  : 4:perl-macros-5.16.3-295.el7.x86_64                       18/114
+    4flix:  
+    4flix:   Verifying  : 1:libglvnd-1.0.1-0.8.git5baa1e5.el7.x86_64                19/114
+    4flix:  
+    4flix:   Verifying  : unzip-6.0-21.el7.x86_64                                   20/114
+    4flix:  
+    4flix:   Verifying  : 7:lvm2-libs-2.02.186-7.el7_8.2.x86_64                     21/114
+    4flix:  
+    4flix:   Verifying  : 1:libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64            22/114
+    4flix:  
+    4flix:   Verifying  : dejavu-sans-fonts-2.33-6.el7.noarch                       23/114
+    4flix:  
+    4flix:   Verifying  : pcsc-lite-libs-1.8.8-8.el7.x86_64                         24/114
+    4flix:  
+    4flix:   Verifying  : libxshmfence-1.2-1.el7.x86_64                             25/114
+    4flix:  
+    4flix:   Verifying  : libwayland-server-1.15.0-1.el7.x86_64                     26/114
+    4flix:  
+    4flix:   Verifying  : libXau-1.0.8-2.1.el7.x86_64                               27/114
+    4flix:  
+    4flix:   Verifying  : perl-File-Path-2.09-2.el7.noarch                          28/114
+    4flix:  
+    4flix:   Verifying  : yum-utils-1.1.31-54.el7_8.noarch                          29/114
+    4flix:  
+    4flix:   Verifying  : gpm-libs-1.20.7-6.el7.x86_64                              30/114
+    4flix:  
+    4flix:   Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                    31/114
+    4flix:  
+    4flix:   Verifying  : libICE-1.0.9-9.el7.x86_64                                 32/114
+    4flix:  
+    4flix:   Verifying  : giflib-4.1.6-9.el7.x86_64                                 33/114
+    4flix:  
+    4flix:   Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     34/114
+    4flix:  
+    4flix:   Verifying  : 1:perl-Pod-Escapes-1.04-295.el7.noarch                    35/114
+    4flix:  
+    4flix:   Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.el7_8.x8    36/114
+    4flix:  
+    4flix:   Verifying  : libXtst-1.2.3-1.el7.x86_64                                37/114
+    4flix:  
+    4flix:   Verifying  : 4:perl-5.16.3-295.el7.x86_64                              38/114
+    4flix:  
+    4flix:   Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    39/114
+    4flix:  
+    4flix:   Verifying  : 7:device-mapper-libs-1.02.164-7.el7_8.2.x86_64            40/114
+    4flix:  
+    4flix:   Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          41/114
+    4flix:  
+    4flix:   Verifying  : 2:vim-common-7.4.629-6.el7.x86_64                         42/114
+    4flix:  
+    4flix:   Verifying  : perl-Encode-2.51-7.el7.x86_64                             43/114
+    4flix:  
+    4flix:   Verifying  : 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64            44/114
+    4flix:  
+    4flix:   Verifying  : jasper-libs-1.900.1-33.el7.x86_64                         45/114
+    4flix:  
+    4flix:   Verifying  : perl-threads-1.87-4.el7.x86_64                            46/114
+    4flix:  
+    4flix:   Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                        47/114
+    4flix:  
+    4flix:   Verifying  : libXfixes-5.0.3-1.el7.x86_64                              48/114
+    4flix:  
+    4flix:   Verifying  : atk-2.28.1-2.el7.x86_64                                   49/114
+    4flix:  
+    4flix:   Verifying  : pixman-0.34.0-1.el7.x86_64                                50/114
+    4flix:  
+    4flix:   Verifying  : fontconfig-2.13.0-4.3.el7.x86_64                          51/114
+    4flix:  
+    4flix:   Verifying  : gdk-pixbuf2-2.36.12-3.el7.x86_64                          52/114
+    4flix:  
+    4flix:   Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     53/114
+    4flix:  
+    4flix:   Verifying  : perl-Storable-2.45-3.el7.x86_64                           54/114
+    4flix:  
+    4flix:   Verifying  : libXcursor-1.1.15-1.el7.x86_64                            55/114
+    4flix:  
+    4flix:   Verifying  : tzdata-java-2020a-1.el7.noarch                            56/114
+    4flix:  
+    4flix:   Verifying  : 7:lvm2-2.02.186-7.el7_8.2.x86_64                          57/114
+    4flix:  
+    4flix:   Verifying  : libwayland-client-1.15.0-1.el7.x86_64                     58/114
+    4flix:  
+    4flix:   Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 59/114
+    4flix:  
+    4flix:   Verifying  : ttmkfdir-3.0.9-42.el7.x86_64                              60/114
+    4flix:  
+    4flix:   Verifying  : 7:device-mapper-1.02.164-7.el7_8.2.x86_64                 61/114
+    4flix:  
+    4flix:   Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      62/114
+    4flix:  
+    4flix:   Verifying  : 1:perl-parent-0.225-244.el7.noarch                        63/114
+    4flix:  
+    4flix:   Verifying  : device-mapper-persistent-data-0.8.5-2.el7.x86_64          64/114
+    4flix:  
+    4flix:   Verifying  : copy-jdk-configs-3.3-10.el7_5.noarch                      65/114
+    4flix:  
+    4flix:   Verifying  : pango-1.42.4-4.el7_7.x86_64                               66/114
+    4flix:  
+    4flix:   Verifying  : fribidi-1.0.2-1.el7_7.1.x86_64                            67/114
+    4flix:  
+    4flix:   Verifying  : 1:java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64         68/114
+    4flix:  
+    4flix:   Verifying  : libaio-0.3.109-13.el7.x86_64                              69/114
+    4flix:  
+    4flix:   Verifying  : libjpeg-turbo-1.2.90-8.el7.x86_64                         70/114
+    4flix:  
+    4flix:   Verifying  : perl-Carp-1.26-244.el7.noarch                             71/114
+    4flix:  
+    4flix:   Verifying  : 7:device-mapper-event-1.02.164-7.el7_8.2.x86_64           72/114
+    4flix:  
+    4flix:   Verifying  : harfbuzz-1.7.5-2.el7.x86_64                               73/114
+    4flix:  
+    4flix:   Verifying  : libXrandr-1.5.1-2.el7.x86_64                              74/114
+    4flix:  
+    4flix:   Verifying  : 2:vim-filesystem-7.4.629-6.el7.x86_64                     75/114
+    4flix:  
+    4flix:   Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                        76/114
+    4flix:  
+    4flix:   Verifying  : libtiff-4.0.3-32.el7.x86_64                               77/114
+    4flix:  
+    4flix:   Verifying  : libSM-1.2.2-2.el7.x86_64                                  78/114
+    4flix:  
+    4flix:   Verifying  : perl-Filter-1.49-3.el7.x86_64                             79/114
+    4flix:  
+    4flix:   Verifying  : libXdamage-1.1.4-4.1.el7.x86_64                           80/114
+    4flix:  
+    4flix:   Verifying  : wget-1.14-18.el7_6.1.x86_64                               81/114
+    4flix:  
+    4flix:   Verifying  : mesa-libgbm-18.3.4-7.el7_8.1.x86_64                       82/114
+    4flix:  
+    4flix:   Verifying  : 7:device-mapper-event-libs-1.02.164-7.el7_8.2.x86_64      83/114
+    4flix:  
+    4flix:   Verifying  : libXinerama-1.1.3-2.1.el7.x86_64                          84/114
+    4flix:  
+    4flix:   Verifying  : libXxf86vm-1.1.4-1.el7.x86_64                             85/114
+    4flix:  
+    4flix:   Verifying  : graphite2-1.3.10-1.el7_3.x86_64                           86/114
+    4flix:  
+    4flix:   Verifying  : perl-Exporter-5.68-3.el7.noarch                           87/114
+    4flix:  
+    4flix:   Verifying  : perl-constant-1.27-2.el7.noarch                           88/114
+    4flix:  
+    4flix:   Verifying  : perl-PathTools-3.40-5.el7.x86_64                          89/114
+    4flix:  
+    4flix:   Verifying  : mesa-libEGL-18.3.4-7.el7_8.1.x86_64                       90/114
+    4flix:  
+    4flix:   Verifying  : perl-Socket-2.010-5.el7.x86_64                            91/114
+    4flix:  
+    4flix:   Verifying  : gtk2-2.24.31-1.el7.x86_64                                 92/114
+    4flix:  
+    4flix:   Verifying  : alsa-lib-1.1.8-1.el7.x86_64                               93/114
+    4flix:  
+    4flix:   Verifying  : dejavu-fonts-common-2.33-6.el7.noarch                     94/114
+    4flix:  
+    4flix:   Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                       95/114
+    4flix:  
+    4flix:   Verifying  : libthai-0.1.14-9.el7.x86_64                               96/114
+    4flix:  
+    4flix:   Verifying  : libX11-1.6.7-2.el7.x86_64                                 97/114
+    4flix:  
+    4flix:   Verifying  : libX11-common-1.6.7-2.el7.noarch                          98/114
+    4flix:  
+    4flix:   Verifying  : libxcb-1.13-1.el7.x86_64                                  99/114
+    4flix:  
+    4flix:   Verifying  : libXft-2.3.2-2.el7.x86_64                                100/114
+    4flix:  
+    4flix:   Verifying  : puppet-agent-5.5.21-1.el7.x86_64                         101/114
+    4flix:  
+    4flix:   Verifying  : perl-Git-1.8.3.1-23.el7_8.noarch                         102/114
+    4flix:  
+    4flix:   Verifying  : 2:vim-enhanced-7.4.629-6.el7.x86_64                      103/114
+    4flix:  
+    4flix:   Verifying  : mesa-libglapi-18.3.4-7.el7_8.1.x86_64                    104/114
+    4flix:  
+    4flix:   Verifying  : xorg-x11-fonts-Type1-7.5-9.el7.noarch                    105/114
+    4flix:  
+    4flix:   Verifying  : 1:perl-Error-0.17020-2.el7.noarch                        106/114
+    4flix:  
+    4flix:   Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64               107/114
+    4flix:  
+    4flix:   Verifying  : jbigkit-libs-2.0-11.el7.x86_64                           108/114
+    4flix:  
+    4flix:   Verifying  : cairo-1.15.12-4.el7.x86_64                               109/114
+    4flix:  
+    4flix:   Verifying  : perl-podlators-2.5.1-3.el7.noarch                        110/114
+    4flix:  
+    4flix:   Verifying  : libfontenc-1.1.3-3.el7.x86_64                            111/114
+    4flix:  
+    4flix:   Verifying  : 7:device-mapper-libs-1.02.164-7.el7_8.1.x86_64           112/114 
+    4flix:   Verifying  : yum-utils-1.1.31-53.el7.noarch                           113/114 
+    4flix:   Verifying  : 7:device-mapper-1.02.164-7.el7_8.1.x86_64                114/114
+    4flix:  
+    4flix: 
+    4flix: Installed:
+    4flix:   device-mapper-persistent-data.x86_64 0:0.8.5-2.el7                            
+    4flix:   epel-release.noarch 0:7-11                                                    
+    4flix:   git.x86_64 0:1.8.3.1-23.el7_8                                                 
+    4flix:   java-1.8.0-openjdk.x86_64 1:1.8.0.252.b09-2.el7_8                             
+    4flix:   lvm2.x86_64 7:2.02.186-7.el7_8.2                                              
+    4flix:   puppet-agent.x86_64 0:5.5.21-1.el7                                            
+    4flix:   unzip.x86_64 0:6.0-21.el7                                                     
+    4flix:   vim-enhanced.x86_64 2:7.4.629-6.el7                                           
+    4flix:   wget.x86_64 0:1.14-18.el7_6.1                                                 
+    4flix: 
+    4flix: Dependency Installed:
+    4flix:   alsa-lib.x86_64 0:1.1.8-1.el7                                                 
+    4flix:   atk.x86_64 0:2.28.1-2.el7                                                     
+    4flix:   cairo.x86_64 0:1.15.12-4.el7                                                  
+    4flix:   copy-jdk-configs.noarch 0:3.3-10.el7_5                                        
+    4flix:   dejavu-fonts-common.noarch 0:2.33-6.el7                                       
+    4flix:   dejavu-sans-fonts.noarch 0:2.33-6.el7                                         
+    4flix:   device-mapper-event.x86_64 7:1.02.164-7.el7_8.2                               
+    4flix:   device-mapper-event-libs.x86_64 7:1.02.164-7.el7_8.2                          
+    4flix:   fontconfig.x86_64 0:2.13.0-4.3.el7                                            
+    4flix:   fontpackages-filesystem.noarch 0:1.44-8.el7                                   
+    4flix:   fribidi.x86_64 0:1.0.2-1.el7_7.1                                              
+    4flix:   gdk-pixbuf2.x86_64 0:2.36.12-3.el7                                            
+    4flix:   giflib.x86_64 0:4.1.6-9.el7                                                   
+    4flix:   gpm-libs.x86_64 0:1.20.7-6.el7                                                
+    4flix:   graphite2.x86_64 0:1.3.10-1.el7_3                                             
+    4flix:   gtk-update-icon-cache.x86_64 0:3.22.30-5.el7                                  
+    4flix:   gtk2.x86_64 0:2.24.31-1.el7                                                   
+    4flix:   harfbuzz.x86_64 0:1.7.5-2.el7                                                 
+    4flix:   hicolor-icon-theme.noarch 0:0.12-7.el7                                        
+    4flix:   jasper-libs.x86_64 0:1.900.1-33.el7                                           
+    4flix:   java-1.8.0-openjdk-headless.x86_64 1:1.8.0.252.b09-2.el7_8                    
+    4flix:   javapackages-tools.noarch 0:3.4.1-11.el7                                      
+    4flix:   jbigkit-libs.x86_64 0:2.0-11.el7                                              
+    4flix:   libICE.x86_64 0:1.0.9-9.el7                                                   
+    4flix:   libSM.x86_64 0:1.2.2-2.el7                                                    
+    4flix:   libX11.x86_64 0:1.6.7-2.el7                                                   
+    4flix:   libX11-common.noarch 0:1.6.7-2.el7                                            
+    4flix:   libXau.x86_64 0:1.0.8-2.1.el7                                                 
+    4flix:   libXcomposite.x86_64 0:0.4.4-4.1.el7                                          
+    4flix:   libXcursor.x86_64 0:1.1.15-1.el7                                              
+    4flix:   libXdamage.x86_64 0:1.1.4-4.1.el7                                             
+    4flix:   libXext.x86_64 0:1.3.3-3.el7                                                  
+    4flix:   libXfixes.x86_64 0:5.0.3-1.el7                                                
+    4flix:   libXft.x86_64 0:2.3.2-2.el7                                                   
+    4flix:   libXi.x86_64 0:1.7.9-1.el7                                                    
+    4flix:   libXinerama.x86_64 0:1.1.3-2.1.el7                                            
+    4flix:   libXrandr.x86_64 0:1.5.1-2.el7                                                
+    4flix:   libXrender.x86_64 0:0.9.10-1.el7                                              
+    4flix:   libXtst.x86_64 0:1.2.3-1.el7                                                  
+    4flix:   libXxf86vm.x86_64 0:1.1.4-1.el7                                               
+    4flix:   libaio.x86_64 0:0.3.109-13.el7                                                
+    4flix:   libfontenc.x86_64 0:1.1.3-3.el7                                               
+    4flix:   libglvnd.x86_64 1:1.0.1-0.8.git5baa1e5.el7                                    
+    4flix:   libglvnd-egl.x86_64 1:1.0.1-0.8.git5baa1e5.el7                                
+    4flix:   libglvnd-glx.x86_64 1:1.0.1-0.8.git5baa1e5.el7                                
+    4flix:   libjpeg-turbo.x86_64 0:1.2.90-8.el7                                           
+    4flix:   libthai.x86_64 0:0.1.14-9.el7                                                 
+    4flix:   libtiff.x86_64 0:4.0.3-32.el7                                                 
+    4flix:   libwayland-client.x86_64 0:1.15.0-1.el7                                       
+    4flix:   libwayland-server.x86_64 0:1.15.0-1.el7                                       
+    4flix:   libxcb.x86_64 0:1.13-1.el7                                                    
+    4flix:   libxshmfence.x86_64 0:1.2-1.el7                                               
+    4flix:   lksctp-tools.x86_64 0:1.0.17-2.el7                                            
+    4flix:   lvm2-libs.x86_64 7:2.02.186-7.el7_8.2                                         
+    4flix:   mesa-libEGL.x86_64 0:18.3.4-7.el7_8.1                                         
+    4flix:   mesa-libGL.x86_64 0:18.3.4-7.el7_8.1                                          
+    4flix:   mesa-libgbm.x86_64 0:18.3.4-7.el7_8.1                                         
+    4flix:   mesa-libglapi.x86_64 0:18.3.4-7.el7_8.1                                       
+    4flix:   pango.x86_64 0:1.42.4-4.el7_7                                                 
+    4flix:   pcsc-lite-libs.x86_64 0:1.8.8-8.el7                                           
+    4flix:   perl.x86_64 4:5.16.3-295.el7                                                  
+    4flix:   perl-Carp.noarch 0:1.26-244.el7                                               
+    4flix:   perl-Encode.x86_64 0:2.51-7.el7                                               
+    4flix:   perl-Error.noarch 1:0.17020-2.el7                                             
+    4flix:   perl-Exporter.noarch 0:5.68-3.el7                                             
+    4flix:   perl-File-Path.noarch 0:2.09-2.el7                                            
+    4flix:   perl-File-Temp.noarch 0:0.23.01-3.el7                                         
+    4flix:   perl-Filter.x86_64 0:1.49-3.el7                                               
+    4flix:   perl-Getopt-Long.noarch 0:2.40-3.el7                                          
+    4flix:   perl-Git.noarch 0:1.8.3.1-23.el7_8                                            
+    4flix:   perl-HTTP-Tiny.noarch 0:0.033-3.el7                                           
+    4flix:   perl-PathTools.x86_64 0:3.40-5.el7                                            
+    4flix:   perl-Pod-Escapes.noarch 1:1.04-295.el7                                        
+    4flix:   perl-Pod-Perldoc.noarch 0:3.20-4.el7                                          
+    4flix:   perl-Pod-Simple.noarch 1:3.28-4.el7                                           
+    4flix:   perl-Pod-Usage.noarch 0:1.63-3.el7                                            
+    4flix:   perl-Scalar-List-Utils.x86_64 0:1.27-248.el7                                  
+    4flix:   perl-Socket.x86_64 0:2.010-5.el7                                              
+    4flix:   perl-Storable.x86_64 0:2.45-3.el7                                             
+    4flix:   perl-TermReadKey.x86_64 0:2.30-20.el7                                         
+    4flix:   perl-Text-ParseWords.noarch 0:3.29-4.el7                                      
+    4flix:   perl-Time-HiRes.x86_64 4:1.9725-3.el7                                         
+    4flix:   perl-Time-Local.noarch 0:1.2300-2.el7                                         
+    4flix:   perl-constant.noarch 0:1.27-2.el7                                             
+    4flix:   perl-libs.x86_64 4:5.16.3-295.el7                                             
+    4flix:   perl-macros.x86_64 4:5.16.3-295.el7                                           
+    4flix:   perl-parent.noarch 1:0.225-244.el7                                            
+    4flix:   perl-podlators.noarch 0:2.5.1-3.el7                                           
+    4flix:   perl-threads.x86_64 0:1.87-4.el7                                              
+    4flix:   perl-threads-shared.x86_64 0:1.43-6.el7                                       
+    4flix:   pixman.x86_64 0:0.34.0-1.el7                                                  
+    4flix:   python-javapackages.noarch 0:3.4.1-11.el7                                     
+    4flix:   python-lxml.x86_64 0:3.2.1-4.el7                                              
+    4flix:   ttmkfdir.x86_64 0:3.0.9-42.el7                                                
+    4flix:   tzdata-java.noarch 0:2020a-1.el7                                              
+    4flix:   vim-common.x86_64 2:7.4.629-6.el7                                             
+    4flix:   vim-filesystem.x86_64 2:7.4.629-6.el7                                         
+    4flix:   xorg-x11-font-utils.x86_64 1:7.5-21.el7                                       
+    4flix:   xorg-x11-fonts-Type1.noarch 0:7.5-9.el7                                       
+    4flix: 
+    4flix: Updated:
+    4flix:   yum-utils.noarch 0:1.1.31-54.el7_8                                            
+    4flix: 
+    4flix: Dependency Updated:
+    4flix:   device-mapper.x86_64 7:1.02.164-7.el7_8.2                                     
+    4flix:   device-mapper-libs.x86_64 7:1.02.164-7.el7_8.2                                
+    4flix: 
+    4flix: Complete!
+    4flix:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+    4flix:                                  Dload  Upload   Total   Spent    Left  Speed
+    4flix:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+    4flix: 100   247  100   247    0     0   3375      0 --:--:-- --:--:-- --:--:--  3430
+    4flix: Archive:  apache-jmeter-4.0.zip
+    4flix:   End-of-central-directory signature not found.  Either this file is not
+    4flix:   a zipfile, or it constitutes one disk of a multi-part archive.  In the
+    4flix:   latter case the central directory and zipfile comment will be found on
+    4flix:   the last disk(s) of this archive.
+    4flix: unzip:  cannot find zipfile directory in one of apache-jmeter-4.0.zip or
+    4flix:         apache-jmeter-4.0.zip.zip, and cannot find apache-jmeter-4.0.zip.ZIP, period.
+    4flix: Loaded plugins: fastestmirror
+    4flix: adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+    4flix: grabbing file https://download.docker.com/linux/centos/docker-ce.repo to /etc/yum.repos.d/docker-ce.repo
+    4flix: repo saved to /etc/yum.repos.d/docker-ce.repo
+    4flix: --2020-08-04 18:17:49--  http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+    4flix: Resolving pkg.jenkins-ci.org (pkg.jenkins-ci.org)... 
+    4flix: 52.202.51.185
+    4flix: Connecting to pkg.jenkins-ci.org (pkg.jenkins-ci.org)|52.202.51.185|:80... 
+    4flix: connected.
+    4flix: HTTP request sent, awaiting response... 
+    4flix: 200 OK
+    4flix: Length: 85
+    4flix: Saving to: ‘/etc/yum.repos.d/jenkins.repo’
+    4flix: 
+    4flix:      0K                                                       100% 10.5M=0s
+    4flix: 
+    4flix: 2020-08-04 18:17:50 (10.5 MB/s) - ‘/etc/yum.repos.d/jenkins.repo’ saved [85/85]
+    4flix: Loaded plugins: fastestmirror
+    4flix: Loading mirror speeds from cached hostfile
+    4flix:  * base: mirror.globo.com
+    4flix:  * epel: d2lzkl7pfhq30w.cloudfront.net
+    4flix:  * extras: mirror.globo.com
+    4flix:  * updates: mirror.globo.com
+    4flix: Resolving Dependencies
+    4flix: --> Running transaction check
+    4flix: ---> Package docker-ce.x86_64 3:19.03.12-3.el7 will be installed
+    4flix: --> Processing Dependency: container-selinux >= 2:2.74 for package: 3:docker-ce-19.03.12-3.el7.x86_64
+    4flix: --> Processing Dependency: containerd.io >= 1.2.2-3 for package: 3:docker-ce-19.03.12-3.el7.x86_64
+    4flix: --> Processing Dependency: docker-ce-cli for package: 3:docker-ce-19.03.12-3.el7.x86_64
+    4flix: --> Processing Dependency: libcgroup for package: 3:docker-ce-19.03.12-3.el7.x86_64
+    4flix: ---> Package jenkins.noarch 0:2.235.3-1.1 will be installed
+    4flix: ---> Package mongodb-org-shell.x86_64 0:3.6.19-1.el7 will be installed
+    4flix: ---> Package python2-pip.noarch 0:8.1.2-12.el7 will be installed
+    4flix: --> Processing Dependency: python-setuptools for package: python2-pip-8.1.2-12.el7.noarch
+    4flix: --> Running transaction check
+    4flix: ---> Package container-selinux.noarch 2:2.119.2-1.911c772.el7_8 will be installed
+    4flix: --> Processing Dependency: policycoreutils-python for package: 2:container-selinux-2.119.2-1.911c772.el7_8.noarch
+    4flix: ---> Package containerd.io.x86_64 0:1.2.13-3.2.el7 will be installed
+    4flix: ---> Package docker-ce-cli.x86_64 1:19.03.12-3.el7 will be installed
+    4flix: ---> Package libcgroup.x86_64 0:0.41-21.el7 will be installed
+    4flix: ---> Package python-setuptools.noarch 0:0.9.8-7.el7 will be installed
+    4flix: --> Processing Dependency: python-backports-ssl_match_hostname for package: python-setuptools-0.9.8-7.el7.noarch
+    4flix: --> Running transaction check
+    4flix: ---> Package policycoreutils-python.x86_64 0:2.5-34.el7 will be installed
+    4flix: --> Processing Dependency: setools-libs >= 3.3.8-4 for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: libsemanage-python >= 2.5-14 for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: audit-libs-python >= 2.1.3-4 for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: python-IPy for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: libqpol.so.1(VERS_1.4)(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: libqpol.so.1(VERS_1.2)(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: libapol.so.4(VERS_4.0)(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: checkpolicy for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: libqpol.so.1()(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: --> Processing Dependency: libapol.so.4()(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    4flix: ---> Package python-backports-ssl_match_hostname.noarch 0:3.5.0.1-1.el7 will be installed
+    4flix: --> Processing Dependency: python-ipaddress for package: python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch
+    4flix: --> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch
+    4flix: --> Running transaction check
+    4flix: ---> Package audit-libs-python.x86_64 0:2.8.5-4.el7 will be installed
+    4flix: ---> Package checkpolicy.x86_64 0:2.5-8.el7 will be installed
+    4flix: ---> Package libsemanage-python.x86_64 0:2.5-14.el7 will be installed
+    4flix: ---> Package python-IPy.noarch 0:0.75-6.el7 will be installed
+    4flix: ---> Package python-backports.x86_64 0:1.0-8.el7 will be installed
+    4flix: ---> Package python-ipaddress.noarch 0:1.0.16-2.el7 will be installed
+    4flix: ---> Package setools-libs.x86_64 0:3.3.8-4.el7 will be installed
+    4flix: --> Finished Dependency Resolution
+    4flix: 
+    4flix: Dependencies Resolved
+    4flix: 
+    4flix: ================================================================================
+    4flix:  Package                Arch   Version                   Repository        Size
+    4flix: ================================================================================
+    4flix: Installing:
+    4flix:  docker-ce              x86_64 3:19.03.12-3.el7          docker-ce-stable  24 M
+    4flix:  jenkins                noarch 2.235.3-1.1               jenkins           63 M
+    4flix:  mongodb-org-shell      x86_64 3.6.19-1.el7              mongodb-org-3.6   12 M
+    4flix:  python2-pip            noarch 8.1.2-12.el7              epel             1.7 M
+    4flix: Installing for dependencies:
+    4flix:  audit-libs-python      x86_64 2.8.5-4.el7               base              76 k
+    4flix:  checkpolicy            x86_64 2.5-8.el7                 base             295 k
+    4flix:  container-selinux      noarch 2:2.119.2-1.911c772.el7_8 extras            40 k
+    4flix:  containerd.io          x86_64 1.2.13-3.2.el7            docker-ce-stable  25 M
+    4flix:  docker-ce-cli          x86_64 1:19.03.12-3.el7          docker-ce-stable  38 M
+    4flix:  libcgroup              x86_64 0.41-21.el7               base              66 k
+    4flix:  libsemanage-python     x86_64 2.5-14.el7                base             113 k
+    4flix:  policycoreutils-python x86_64 2.5-34.el7                base             457 k
+    4flix:  python-IPy             noarch 0.75-6.el7                base              32 k
+    4flix:  python-backports       x86_64 1.0-8.el7                 base             5.8 k
+    4flix:  python-backports-ssl_match_hostname
+    4flix:                         noarch 3.5.0.1-1.el7             base              13 k
+    4flix:  python-ipaddress       noarch 1.0.16-2.el7              base              34 k
+    4flix:  python-setuptools      noarch 0.9.8-7.el7               base             397 k
+    4flix:  setools-libs           x86_64 3.3.8-4.el7               base             620 k
+    4flix: 
+    4flix: Transaction Summary
+    4flix: ================================================================================
+    4flix: Install  4 Packages (+14 Dependent packages)
+    4flix: 
+    4flix: Total download size: 166 M
+    4flix: Installed size: 470 M
+    4flix: Downloading packages:
+    4flix: Public key for docker-ce-19.03.12-3.el7.x86_64.rpm is not installed
+    4flix: warning: /var/cache/yum/x86_64/7/docker-ce-stable/packages/docker-ce-19.03.12-3.el7.x86_64.rpm: Header V4 RSA/SHA512 Signature, key ID 621e9f35: NOKEY
+    4flix: warning: 
+    4flix: Public key for python2-pip-8.1.2-12.el7.noarch.rpm is not installed
+    4flix: /var/cache/yum/x86_64/7/epel/packages/python2-pip-8.1.2-12.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+    4flix: Public key for mongodb-org-shell-3.6.19-1.el7.x86_64.rpm is not installed
+    4flix: warning: /var/cache/yum/x86_64/7/mongodb-org-3.6/packages/mongodb-org-shell-3.6.19-1.el7.x86_64.rpm: Header V3 RSA/SHA1 Signature, key ID 91fa4ad5: NOKEY
+    4flix: Public key for jenkins-2.235.3-1.1.noarch.rpm is not installed
+    4flix: warning: /var/cache/yum/x86_64/7/jenkins/packages/jenkins-2.235.3-1.1.noarch.rpm: Header V4 RSA/SHA512 Signature, key ID 45f2c3d5: NOKEY
+    4flix: --------------------------------------------------------------------------------
+    4flix: Total                                              2.3 MB/s | 166 MB  01:11     
+    4flix: 
+    4flix: 
+    4flix: Public key for jenkins-2.235.3-1.1.noarch.rpm is not installed
+    4flix: Failed to execute operation: No such file or directory
+    4flix: Failed to start jenkins.service: Unit not found.
+    4flix: Failed to start docker.service: Unit not found.
