@@ -48,7 +48,8 @@ Vagrant.configure("2") do |config|
     git clone https://github.com/fabiokerber/roles.git /etc/ansible		      #Ansible
     pip3 install ansible							      #Ansible
     touch /var/log/ansible.log && chown vagrant:root /var/log/ansible.log	      #Ansible
-    sed -i s/^SELINUX=.*$/SELINUX=permissive/ /etc/selinux/config
+    chown -R vagrant:root /etc/ansible						      #Ansible
+    sed -i s/^SELINUX=.*$/SELINUX=permissive/ /etc/selinux/config		      #Operating_System
   SHELL
 
   end
