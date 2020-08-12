@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
     config.vm.define "#{name}" do |machine|
       machine.vm.box = "#{conf["image"]}"
       machine.vm.hostname = "#{name}"
-      machine.vm.network "public_network", bridge: "enp1s0", ip: "192.168.0.#{conf["ip"]}", gateway: "192.168.0.1" 
+      #machine.vm.network "public_network", bridge: "enp1s0", ip: "192.168.0.#{conf["ip"]}", gateway: "192.168.0.1" 
+      machine.vm.network "public_network", bridge: "enp1s0", auto_config: false 
       machine.vm.provider "virtualbox" do |vb|
         vb.name = "#{name}"
         vb.memory = conf["memory"]
@@ -32,9 +33,17 @@ Vagrant.configure("2") do |config|
   config.vm.define "servidor" do |servidor|
   
   servidor.vm.provision "shell", inline: <<-SHELL
-    echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf		      #Operating_System
-    echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf		      #Operating_System
-    sysctl -p									      #Operating_System
+    nmcli con mod "Wired connection 1" connection.id eth1			      #Network_Configuration
+    nmcli con mod eth1 ipv4.addresses "192.168.0.200/24"			      #Network_Configuration
+    nmcli con mod eth1 ipv4.gateway "192.168.0.1"				      #Network_Configuration
+    nmcli con mod eth1 ipv4.dns "1.1.1.1" +ipv4.dns "1.0.0.1"			      #Network_Configuration
+    nmcli con mod eth1 ipv4.method manual					      #Network_Configuration
+    nmcli con mod eth1 connection.autoconnect yes				      #Network_Configuration
+    nmcli con mod eth1 ipv6.method ignore					      #Network_Configuration
+    nmcli con mod eth1 ipv6.never-default yes					      #Network_Configuration   
+    echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf		      #Network_Configuration
+    echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf		      #Network_Configuration
+    sysctl -p									      #Network_Configuration
     timedatectl set-timezone America/Sao_Paulo					      #Operating_System
     yum install epel-release -y							      #Operating_System
     sed -i s/^enabled=0/enabled=1/ /etc/yum.repos.d/CentOS-PowerTools.repo	      #Operating_System
