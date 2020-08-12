@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 machines = {
-  "servidor" => {"memory" => "4096", "cpu" => "4", "ip" => "10", "image" => "centos/8"}
+  "servidor" => {"memory" => "4096", "cpu" => "4", "ip" => "200", "image" => "centos/8", "interface" => "eth1"}
 }
 
 Vagrant.configure("2") do |config|
@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "#{name}" do |machine|
       machine.vm.box = "#{conf["image"]}"
       machine.vm.hostname = "#{name}"
-      machine.vm.network "private_network", ip: "192.168.99.#{conf["ip"]}"
+      machine.vm.network "public_network", bridge: "enp1s0", ip: "192.168.0.#{conf["ip"]}", gateway: "192.168.0.1" 
       machine.vm.provider "virtualbox" do |vb|
         vb.name = "#{name}"
         vb.memory = conf["memory"]
@@ -30,27 +30,33 @@ Vagrant.configure("2") do |config|
 
 #SAMBA
   config.vm.define "servidor" do |servidor|
-    servidor.vm.network "forwarded_port", guest: 137, host: 137
-    servidor.vm.network "forwarded_port", guest: 138, host: 138
-    servidor.vm.network "forwarded_port", guest: 139, host: 139
-    servidor.vm.network "forwarded_port", guest: 445, host: 445
-
-  servidor.vm.provision "shell", inline: <<-SHELL
-    timedatectl set-timezone America/Sao_Paulo					      #Operating_System
-    yum install epel-release -y							      #Operating_System
-    sed -i s/^enabled=0/enabled=1/ /etc/yum.repos.d/CentOS-PowerTools.repo	      #Operating_System
-    yum update -y								      #Operating_System
-    yum install elfutils-libelf-devel kernel-devel kernel-headers gcc make perl -y    #VBox_Guest_Additions
-    yum install python3-devel python3 libselinux-python3 -y			      #Ansible
-    yum groupinstall 'development tools' -y					      #Ansible
-    yum install htop lsb vim tree gdisk iptraf lshw nload nmap telnet wget -y	      #Tools
-    mkdir -p /etc/ansible							      #Ansible
-    git clone https://github.com/fabiokerber/roles.git /etc/ansible		      #Ansible
-    pip3 install ansible							      #Ansible
-    touch /var/log/ansible.log && chown vagrant:root /var/log/ansible.log	      #Ansible
-    chown -R vagrant:root /etc/ansible						      #Ansible
-    sed -i s/^SELINUX=.*$/SELINUX=permissive/ /etc/selinux/config		      #Operating_System
-  SHELL
+  
+  #servidor.vm.provision "shell", inline: <<-SHELL
+    #nmcli con mod eth1 ipv4.addresses "192.168.0.200/24"			      #Operating_System
+    #nmcli con mod eth1 ipv4.gateway "192.168.0.1"				      #Operating_System
+    #nmcli con mod eth1 ipv4.dns "1.1.1.1" +ipv4.dns "1.0.0.1"			      #Operating_System
+    #nmcli con mod eth1 ipv4.method manual					      #Operating_System
+    #nmcli con mod eth1 connection.autoconnect yes				      #Operating_System
+    #nmcli con mod eth1 ipv6.method ignore					      #Operating_System
+    #nmcli con mod eth1 ipv6.never-default yes					      #Operating_System
+    #echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf		      #Operating_System
+    #echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf		      #Operating_System
+    #sysctl -p									      #Operating_System
+    #timedatectl set-timezone America/Sao_Paulo					      #Operating_System
+    #yum install epel-release -y							      #Operating_System
+    #sed -i s/^enabled=0/enabled=1/ /etc/yum.repos.d/CentOS-PowerTools.repo	      #Operating_System
+    #yum update -y								      #Operating_System
+    #yum install elfutils-libelf-devel kernel-devel kernel-headers gcc make perl -y    #VBox_Guest_Additions
+    #yum install python3-devel python3 libselinux-python3 -y			      #Ansible
+    #yum groupinstall 'development tools' -y					      #Ansible
+    #yum install htop lsb vim tree gdisk iptraf lshw nload nmap telnet wget -y	      #Tools
+    #mkdir -p /etc/ansible							      #Ansible
+    #git clone https://github.com/fabiokerber/roles.git /etc/ansible		      #Ansible
+    #pip3 install ansible							      #Ansible
+    #touch /var/log/ansible.log && chown vagrant:root /var/log/ansible.log	      #Ansible
+    #chown -R vagrant:root /etc/ansible						      #Ansible
+    #sed -i s/^SELINUX=.*$/SELINUX=permissive/ /etc/selinux/config		      #Operating_System
+  #SHELL
 
   end
 end
