@@ -32,6 +32,9 @@ Vagrant.configure("2") do |config|
   config.vm.define "servidor" do |servidor|
   
   servidor.vm.provision "shell", inline: <<-SHELL
+    echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf		      #Operating_System
+    echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf		      #Operating_System
+    sysctl -p									      #Operating_System
     timedatectl set-timezone America/Sao_Paulo					      #Operating_System
     yum install epel-release -y							      #Operating_System
     sed -i s/^enabled=0/enabled=1/ /etc/yum.repos.d/CentOS-PowerTools.repo	      #Operating_System
